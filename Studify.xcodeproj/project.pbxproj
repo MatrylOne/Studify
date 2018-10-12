@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
 		AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
+		AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416DB216673BD00006A3F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DA216673BD00006A3F /* art.scnassets */; };
 		AAD416DD216673BD00006A3F /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ARController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
+		AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewCell.swift; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DA216673BD00006A3F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -83,12 +85,22 @@
 		AA4BFE6C2170C815004FC4BD /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AAD416DE216673BD00006A3F /* Main.storyboard */,
+				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
 				AAD416DC216673BD00006A3F /* ARController.swift */,
 				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
 				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
+				AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA4BFE732170C9A5004FC4BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
+				AAD416DE216673BD00006A3F /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AAD416CC216673BC00006A3F = {
@@ -114,11 +126,10 @@
 		AAD416D7216673BD00006A3F /* Studify */ = {
 			isa = PBXGroup;
 			children = (
+				AA4BFE732170C9A5004FC4BD /* Views */,
 				AA4BFE6C2170C815004FC4BD /* ViewControllers */,
-				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
 				AAD416DA216673BD00006A3F /* art.scnassets */,
 				AAD416E1216673BD00006A3F /* Assets.xcassets */,
-				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
 				AAD416E6216673BD00006A3F /* Info.plist */,
 			);
 			path = Studify;
@@ -274,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
 				AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */,
 				AAD416DD216673BD00006A3F /* ARController.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,

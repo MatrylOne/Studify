@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9es-vj-ciI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9es-vj-ciI">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9es-vj-ciI" id="vAW-5E-MJm">
@@ -66,27 +65,78 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ASN-xL-poo" kind="relationship" relationship="rootViewController" id="3M2-ao-XNb"/>
+                        <segue destination="6Lf-II-pOD" kind="relationship" relationship="rootViewController" id="2Mo-Ik-EgS"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="-2252" y="-850"/>
         </scene>
         <!--Lekcje-->
-        <scene sceneID="Jbu-ux-FvV">
+        <scene sceneID="lnr-tJ-Rsp">
             <objects>
-                <viewController id="ASN-xL-poo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ByR-sJ-kMK">
+                <collectionViewController id="6Lf-II-pOD" customClass="LessonsViewController" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="a9i-aK-LmA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="BUr-8C-yVL"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Lekcje" id="lbs-6M-Dts"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3rn-bI-rZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RRQ-Zo-dM5">
+                            <size key="itemSize" width="341" height="72"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="u6o-k0-DgX" customClass="LessonsViewCell" customModule="Studify" customModuleProvider="target">
+                                <rect key="frame" x="17" y="0.0" width="341" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-6t-0Id">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="72"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OT5-EY-qiT">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="72"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruch harmoniczny" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-5z-QgK">
+                                            <rect key="frame" x="99.666666666666686" y="26" width="142" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OT5-EY-qiT" secondAttribute="bottom" id="6fQ-xt-eXZ"/>
+                                    <constraint firstItem="qGg-5z-QgK" firstAttribute="centerY" secondItem="u6o-k0-DgX" secondAttribute="centerY" id="BIb-B7-hbO"/>
+                                    <constraint firstItem="OT5-EY-qiT" firstAttribute="top" secondItem="u6o-k0-DgX" secondAttribute="top" id="BU8-ZD-WpI"/>
+                                    <constraint firstAttribute="trailing" secondItem="OT5-EY-qiT" secondAttribute="trailing" id="TXm-yq-fjk"/>
+                                    <constraint firstItem="qGg-5z-QgK" firstAttribute="centerX" secondItem="u6o-k0-DgX" secondAttribute="centerX" id="b6g-Yr-beO"/>
+                                    <constraint firstItem="zb9-6t-0Id" firstAttribute="leading" secondItem="u6o-k0-DgX" secondAttribute="leading" id="gA3-ag-MwZ"/>
+                                    <constraint firstItem="OT5-EY-qiT" firstAttribute="leading" secondItem="u6o-k0-DgX" secondAttribute="leading" id="m6L-yj-ntY"/>
+                                    <constraint firstAttribute="bottom" secondItem="zb9-6t-0Id" secondAttribute="bottom" id="qhF-XC-SLd"/>
+                                    <constraint firstItem="zb9-6t-0Id" firstAttribute="top" secondItem="u6o-k0-DgX" secondAttribute="top" id="raX-FU-Di3"/>
+                                    <constraint firstAttribute="trailing" secondItem="zb9-6t-0Id" secondAttribute="trailing" id="wac-K5-aWw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="color" destination="OT5-EY-qiT" id="LZQ-fv-tmw"/>
+                                    <outlet property="image" destination="zb9-6t-0Id" id="As6-7U-VNO"/>
+                                    <outlet property="label" destination="qGg-5z-QgK" id="Z5X-6O-xG6"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6Lf-II-pOD" id="H7b-dE-CF3"/>
+                            <outlet property="delegate" destination="6Lf-II-pOD" id="39H-V1-TNf"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Lekcje" id="5BP-Hv-qjY"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-JV-kx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1396" y="-850"/>
+            <point key="canvasLocation" x="-1452" y="-853.44827586206895"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Zfo-fE-R1E">
