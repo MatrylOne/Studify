@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416DB216673BD00006A3F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DA216673BD00006A3F /* art.scnassets */; };
-		AAD416DD216673BD00006A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ViewController.swift */; };
+		AAD416DD216673BD00006A3F /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ARController.swift */; };
 		AAD416E0216673BD00006A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DE216673BD00006A3F /* Main.storyboard */; };
 		AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E1216673BD00006A3F /* Assets.xcassets */; };
 		AAD416E5216673BD00006A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DA216673BD00006A3F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		AAD416DC216673BD00006A3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAD416DC216673BD00006A3F /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		AAD416DF216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAD416E1216673BD00006A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD416E4216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
 				AAD416DA216673BD00006A3F /* art.scnassets */,
-				AAD416DC216673BD00006A3F /* ViewController.swift */,
+				AAD416DC216673BD00006A3F /* ARController.swift */,
 				AAD416DE216673BD00006A3F /* Main.storyboard */,
 				AAD416E1216673BD00006A3F /* Assets.xcassets */,
 				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
@@ -260,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD416DD216673BD00006A3F /* ViewController.swift in Sources */,
+				AAD416DD216673BD00006A3F /* ARController.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
