@@ -9,7 +9,6 @@
 import UIKit
 
 class LessonsViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var color: UIView!
     @IBOutlet weak var image: UIImageView!

@@ -10,6 +10,7 @@
 		AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
 		AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
 		AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */; };
+		AA6D54CD2174D47200730309 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416DB216673BD00006A3F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DA216673BD00006A3F /* art.scnassets */; };
 		AAD416DD216673BD00006A3F /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ARController.swift */; };
@@ -41,6 +42,7 @@
 		AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewCell.swift; sourceTree = "<group>"; };
+		AA6D54CC2174D47200730309 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DA216673BD00006A3F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
 				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
 				AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */,
+				AA6D54CC2174D47200730309 /* ARViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
 				AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */,
 				AAD416DD216673BD00006A3F /* ARController.swift in Sources */,
+				AA6D54CD2174D47200730309 /* ARViewController.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
 				AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */,
 			);
