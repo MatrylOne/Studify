@@ -10,20 +10,24 @@ import UIKit
 
 private let reuseIdentifier = "cell"
 
+private let lessons = [
+    Lesson(name: "Grawitacja", description: "Lekcja o grawitacji", instruction: "Rzuć kulką"),
+    Lesson(name: "Ruch harmoniczny", description: "Lekcja o ruchu harmonicznym", instruction: "Rusz wahadłem")
+]
+
 class LessonsViewController: UICollectionViewController {
+    
+    var selectedModel = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Do any additional setup after loading the view.
+        
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
     }
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as? LessonDetailViewController
+        controller?.model = lessons[selectedModel]
     }
 
     // MARK: UICollectionViewDataSource
@@ -36,16 +40,18 @@ class LessonsViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return lessons.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LessonsViewCell
         // Configure the cell
         
-        cell.label.text = "Hello World"
+        let lesson = lessons[indexPath.row]
+        
+        cell.label.text = lesson.name
         cell.label.textColor = .black
-        cell.color.backgroundColor = UIColor(white: 0.9, alpha: 1)
+        cell.color.backgroundColor = UIColor(white: 0.95, alpha: 1)
         cell.layer.cornerRadius = 10
     
         return cell
@@ -69,7 +75,8 @@ class LessonsViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ARSeque", sender: self)
+        selectedModel = indexPath.row
+        performSegue(withIdentifier: "Detail", sender: self)
     }
 
 }
