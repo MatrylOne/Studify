@@ -10,12 +10,17 @@ import UIKit
 import ARKit
 import SceneKit
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
+class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var returnButton: UIButton!
     
-    var planes = [ARPlaneAnchor:Plane]()
+    var object:SCNNode?
+    
+    var screenCenter: CGPoint {
+        let bounds = sceneView.bounds
+        return CGPoint(x: bounds.midX, y: bounds.midY)
+    }
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true)
@@ -29,13 +34,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.run(configuration)
         sceneView.debugOptions = [.showFeaturePoints, .showWorldOrigin]
         sceneView.delegate = self
-        
+        sceneView.session.delegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestureToSceneView()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,55 +47,34 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        
-        DispatchQueue.main.async {
-            guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-            self.addPlane(node: node, anchor: planeAnchor)
-        }
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        DispatchQueue.main.async {
-            guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-            self.updatePlane(anchor: planeAnchor)
-        }
-    }
-    
-    func addPlane(node:SCNNode, anchor:ARPlaneAnchor){
-//        let plane = Plane(anchor)
-//        planes[anchor] = plane
-//        node.addChildNode(plane)
-    }
-    
-    func updatePlane(anchor:ARPlaneAnchor){
-//        let plane = planes[anchor]
-//        plane?.update(anchor: anchor)
-    }
-    
     @objc func addAircraft(widhGestureRecognizer recognizer:UIGestureRecognizer){
         let taplocation = recognizer.location(in: sceneView)
         let hitTestResults = sceneView.hitTest(taplocation, types: .existingPlaneUsingExtent)
         
-        
         guard let hitTestResult = hitTestResults.first else { return }
-        let transform = hitTestResult.worldTransform
-        let x = transform.columns.3.x
-        let y = transform.columns.3.y
-        let z = transform.columns.3.z
         
+        let transform = hitTestResult.worldTransform.translation
+        let x = transform.x
+        let y = transform.y
+        let z = transform.z
         
-        print(x, y ,z)
-        
-        guard let aircraftScene = SCNScene(named: "art.scnassets/ship.scn"),
-            let aircraftNode = aircraftScene.rootNode.childNodes.first
-            else {return}
-        
-        aircraftNode.position = SCNVector3(x, y, z)
-        aircraftNode.scale = SCNVector3(0.4, 0.4, 0.4)
-        sceneView.scene.rootNode.addChildNode(aircraftNode)
-        
-        print("added")
+        if object == nil{
+            DispatchQueue.main.async {
+                guard let aircraftScene = SCNScene(named: "art.scnassets/ship.scn"),
+                    let aircraftNode = aircraftScene.rootNode.childNodes.first
+                    else {return}
+                
+                aircraftNode.position = SCNVector3(x, y, z)
+                aircraftNode.scale = SCNVector3(0.4, 0.4, 0.4)
+                self.object = aircraftNode
+                self.sceneView.scene.rootNode.addChildNode(aircraftNode)
+            }
+        }else{
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 0.5
+            object!.position = SCNVector3(x, y ,z)
+            SCNTransaction.commit()
+        }
     }
     
     func addGestureToSceneView(){
