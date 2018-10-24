@@ -17,6 +17,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     var object:SCNNode?
     
+    var currentRotation:Float = 0
+    
     var screenCenter: CGPoint {
         let bounds = sceneView.bounds
         return CGPoint(x: bounds.midX, y: bounds.midY)
@@ -31,8 +33,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
+        configuration.environmentTexturing = .automatic
+        setupCamera()
         sceneView.session.run(configuration)
-        sceneView.debugOptions = [.showFeaturePoints, .showWorldOrigin]
         sceneView.delegate = self
         sceneView.session.delegate = self
     }
@@ -60,26 +63,54 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         
         if object == nil{
             DispatchQueue.main.async {
-                guard let aircraftScene = SCNScene(named: "art.scnassets/ship.scn"),
+                guard let aircraftScene = SCNScene(named: "art.scnassets/physical.scn"),
                     let aircraftNode = aircraftScene.rootNode.childNodes.first
                     else {return}
                 
                 aircraftNode.position = SCNVector3(x, y, z)
-                aircraftNode.scale = SCNVector3(0.4, 0.4, 0.4)
-                self.object = aircraftNode
                 self.sceneView.scene.rootNode.addChildNode(aircraftNode)
+                self.object = aircraftNode
+                let handle = aircraftNode.childNode(withName: "handle", recursively: false)
+                guard let h = handle else { return }
+                print("handle found")
+                h.runAction(self.animate(duration: self.calculateTime(lenght: 30), angle: CGFloat.pi/18))
             }
         }else{
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.5
-            object!.position = SCNVector3(x, y ,z)
+            self.object!.position = SCNVector3(x, y ,z)
             SCNTransaction.commit()
         }
     }
     
+    @objc func rotateAirCraft(withGestureRecognizer recognizer:UIPanGestureRecognizer){
+        guard let node = object else { return }
+        let translation = recognizer.translation(in: sceneView)
+        let angleY = (Float)(translation.x) * (Float)(Double.pi) / 180.0 + currentRotation
+        SCNTransaction.begin()
+        if recognizer.state == .changed{
+            SCNTransaction.animationTimingFunction = CAMediaTimingFunction(name: .linear)
+            SCNTransaction.animationDuration = 0.1
+            node.eulerAngles.y = angleY
+        }else if recognizer.state == .ended{
+            SCNTransaction.animationTimingFunction = CAMediaTimingFunction(name: .easeOut)
+            SCNTransaction.animationDuration = 0.5
+            node.eulerAngles.y = angleY
+            currentRotation = node.eulerAngles.y
+        }
+        SCNTransaction.commit()
+    }
+    
     func addGestureToSceneView(){
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addAircraft(widhGestureRecognizer:)))
-        sceneView.addGestureRecognizer(tapGestureRecognizer)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addAircraft(widhGestureRecognizer:)))
+        sceneView.addGestureRecognizer(tap)
+        tap.numberOfTapsRequired = 1
+        
+        let rotate = UIPanGestureRecognizer(target: self, action: #selector(ARViewController.rotateAirCraft(withGestureRecognizer:)))
+        rotate.minimumNumberOfTouches = 2
+        rotate.maximumNumberOfTouches = 3
+        
+        sceneView.addGestureRecognizer(rotate)
     }
     
     func setupCamera() {
@@ -87,14 +118,26 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
             fatalError("Expected a valid `pointOfView` from the scene.")
         }
         
-        /*
-         Enable HDR camera settings for the most realistic appearance
-         with environmental lighting and physically based materials.
-         */
         camera.wantsHDR = true
         camera.exposureOffset = -1
         camera.minimumExposure = -1
         camera.maximumExposure = 3
+    }
+
+    func animate(duration:Double, angle:CGFloat) -> SCNAction{
+        let moveRight = SCNAction.rotateTo(x: 0, y: 0, z: angle, duration: duration/2)
+        moveRight.timingMode = .easeInEaseOut
+        let moveLeft = SCNAction.rotateTo(x: 0, y: 0, z: angle * -1.0, duration: duration/2)
+        moveLeft.timingMode = .easeInEaseOut
+        let moveSequence = SCNAction.sequence([moveRight, moveLeft])
+        let moveLoop = SCNAction.repeatForever(moveSequence)
+        
+        return moveLoop
+    }
+    
+    func calculateTime(lenght:Double) -> Double{
+        let g = Double(9.80665)
+        return 2*Double.pi * sqrt(lenght / g)
     }
 
 }

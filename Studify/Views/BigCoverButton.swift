@@ -9,14 +9,9 @@
 import UIKit
 
 class BigCoverButton: UIButton {
-
-    var image:UIImage?
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        // add play icon
-        
+        imageView?.contentMode = .scaleAspectFill
     }
 
 }
