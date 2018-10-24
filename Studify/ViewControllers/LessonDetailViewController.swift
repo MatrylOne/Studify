@@ -11,12 +11,14 @@ import UIKit
 class LessonDetailViewController: UIViewController {
     
     var model:Lesson?
+    @IBOutlet weak var runButton: BigCoverButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let model = model{
             title = model.name
+            runButton.setImage(UIImage(named: model.image), for: .normal)
         }
     }
     

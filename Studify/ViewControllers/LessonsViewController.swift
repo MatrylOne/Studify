@@ -11,18 +11,18 @@ import UIKit
 private let reuseIdentifier = "cell"
 
 private let lessons = [
-    Lesson(name: "Grawitacja", description: "Lekcja o grawitacji", instruction: "Rzuć kulką"),
-    Lesson(name: "Ruch harmoniczny", description: "Lekcja o ruchu harmonicznym", instruction: "Rusz wahadłem")
+    Lesson(name: "Grawitacja", description: "Lekcja o grawitacji", instruction: "Rzuć kulką", image:"gravity"),
+    Lesson(name: "Ruch harmoniczny", description: "Lekcja o ruchu harmonicznym", instruction: "Rusz wahadłem", image:"gravity")
 ]
 
-class LessonsViewController: UICollectionViewController {
+class LessonsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var selectedModel = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,8 +50,7 @@ class LessonsViewController: UICollectionViewController {
         let lesson = lessons[indexPath.row]
         
         cell.label.text = lesson.name
-        cell.label.textColor = .black
-        cell.color.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        cell.image.image = UIImage(named: lesson.image)
         cell.layer.cornerRadius = 10
     
         return cell
@@ -77,6 +76,11 @@ class LessonsViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedModel = indexPath.row
         performSegue(withIdentifier: "Detail", sender: self)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width - 32
+        return CGSize(width: width, height: width/4)
     }
 
 }

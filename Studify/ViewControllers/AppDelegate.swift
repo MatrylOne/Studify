@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        guard ARConfiguration.isSupported == true else {
+            fatalError("ARKit nie jest dostępny na tym urządzeniu.")
+        }
+        
         return true
     }
 

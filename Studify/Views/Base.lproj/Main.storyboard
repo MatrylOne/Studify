@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1e2-DW-Bva">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,7 +15,7 @@
                 <navigationController id="p9I-Mr-Qdl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="k1y-Ym-BsY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZoK-hx-PdX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -31,15 +31,15 @@
             <objects>
                 <tableViewController id="ZHO-IR-gsm" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nQd-6a-Mf4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9es-vj-ciI">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9es-vj-ciI" id="vAW-5E-MJm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -61,7 +61,7 @@
                 <navigationController id="5xo-JL-dGu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="K5C-7h-VOD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Bpt-bK-Tbj">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -77,7 +77,7 @@
             <objects>
                 <collectionViewController id="6Lf-II-pOD" customClass="LessonsViewController" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="a9i-aK-LmA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RRQ-Zo-dM5">
@@ -88,34 +88,35 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="u6o-k0-DgX" customClass="LessonsViewCell" customModule="Studify" customModuleProvider="target">
-                                <rect key="frame" x="31" y="0.0" width="352" height="72"/>
+                                <rect key="frame" x="11.666666666666666" y="0.0" width="352" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="352" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-6t-0Id">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zb9-6t-0Id">
                                             <rect key="frame" x="0.0" y="0.0" width="352" height="72"/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OT5-EY-qiT">
+                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-4h-ynT">
                                             <rect key="frame" x="0.0" y="0.0" width="352" height="72"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruch harmoniczny" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-5z-QgK">
                                             <rect key="frame" x="105" y="26" width="142" height="20"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="OT5-EY-qiT" secondAttribute="bottom" id="6fQ-xt-eXZ"/>
-                                    <constraint firstItem="OT5-EY-qiT" firstAttribute="top" secondItem="u6o-k0-DgX" secondAttribute="top" id="BU8-ZD-WpI"/>
-                                    <constraint firstAttribute="trailing" secondItem="OT5-EY-qiT" secondAttribute="trailing" id="TXm-yq-fjk"/>
-                                    <constraint firstItem="qGg-5z-QgK" firstAttribute="centerX" secondItem="OT5-EY-qiT" secondAttribute="centerX" id="bif-7m-OJV"/>
+                                    <constraint firstItem="qGg-5z-QgK" firstAttribute="centerY" secondItem="u6o-k0-DgX" secondAttribute="centerY" id="6go-wV-CPB"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ej-4h-ynT" secondAttribute="bottom" id="8xC-Hw-A2E"/>
+                                    <constraint firstItem="7Ej-4h-ynT" firstAttribute="leading" secondItem="u6o-k0-DgX" secondAttribute="leading" id="CJ8-G7-pWP"/>
+                                    <constraint firstItem="qGg-5z-QgK" firstAttribute="centerX" secondItem="u6o-k0-DgX" secondAttribute="centerX" id="MgA-3t-YNf"/>
+                                    <constraint firstItem="7Ej-4h-ynT" firstAttribute="top" secondItem="u6o-k0-DgX" secondAttribute="top" id="PC4-gm-nEr"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Ej-4h-ynT" secondAttribute="trailing" id="dEH-1a-ivt"/>
                                     <constraint firstItem="zb9-6t-0Id" firstAttribute="leading" secondItem="u6o-k0-DgX" secondAttribute="leading" id="gA3-ag-MwZ"/>
-                                    <constraint firstItem="OT5-EY-qiT" firstAttribute="leading" secondItem="u6o-k0-DgX" secondAttribute="leading" id="m6L-yj-ntY"/>
                                     <constraint firstItem="qGg-5z-QgK" firstAttribute="centerY" secondItem="zb9-6t-0Id" secondAttribute="centerY" id="mL5-RB-89F"/>
                                     <constraint firstAttribute="bottom" secondItem="zb9-6t-0Id" secondAttribute="bottom" id="qhF-XC-SLd"/>
                                     <constraint firstItem="zb9-6t-0Id" firstAttribute="top" secondItem="u6o-k0-DgX" secondAttribute="top" id="raX-FU-Di3"/>
@@ -124,7 +125,6 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <size key="customSize" width="352" height="72"/>
                                 <connections>
-                                    <outlet property="color" destination="OT5-EY-qiT" id="LZQ-fv-tmw"/>
                                     <outlet property="image" destination="zb9-6t-0Id" id="As6-7U-VNO"/>
                                     <outlet property="label" destination="qGg-5z-QgK" id="Z5X-6O-xG6"/>
                                 </connections>
@@ -149,11 +149,11 @@
             <objects>
                 <viewController id="uB7-Rm-epd" customClass="LessonDetailViewController" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dwa-hF-6nZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdt-4W-qoB">
-                                <rect key="frame" x="16" y="156" width="382" height="149"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdt-4W-qoB" customClass="BigCoverButton" customModule="Studify" customModuleProvider="target">
+                                <rect key="frame" x="16" y="156" width="343" height="149"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149" id="55K-T0-vjs"/>
@@ -177,6 +177,7 @@
                         <viewLayoutGuide key="safeArea" id="fym-13-yfF"/>
                     </view>
                     <connections>
+                        <outlet property="runButton" destination="qdt-4W-qoB" id="tQc-Xe-leq"/>
                         <segue destination="ctP-92-R61" kind="presentation" identifier="ARSegue" modalTransitionStyle="crossDissolve" id="0CJ-CZ-gae"/>
                     </connections>
                 </viewController>
@@ -189,15 +190,30 @@
             <objects>
                 <viewController id="ctP-92-R61" customClass="ARViewController" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qih-hd-CPx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-f3-bP2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-f3-bP2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-Zy-LcE">
-                                <rect key="frame" x="184" y="84" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqZ-2m-7mj" customClass="BlurButton" customModule="Studify" customModuleProvider="target">
+                                <rect key="frame" x="293" y="44" width="62" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="ctP-92-R61" eventType="touchUpInside" id="rto-yr-TZt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-Zy-LcE" customClass="BlurButton" customModule="Studify" customModuleProvider="target">
+                                <rect key="frame" x="20" y="44" width="70" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Return">
+                                    <color key="titleColor" white="0.0" alpha="0.80254181338028174" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="close:" destination="ctP-92-R61" eventType="touchUpInside" id="Zgc-5o-lYu"/>
                                 </connections>
@@ -205,22 +221,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IbI-Zy-LcE" firstAttribute="centerX" secondItem="qih-hd-CPx" secondAttribute="centerX" id="Ins-M0-6fJ"/>
-                            <constraint firstItem="IbI-Zy-LcE" firstAttribute="top" secondItem="1ar-wj-Dxf" secondAttribute="top" constant="40" id="LVe-bJ-c6S"/>
+                            <constraint firstItem="hqZ-2m-7mj" firstAttribute="top" secondItem="1ar-wj-Dxf" secondAttribute="top" id="EQs-Dq-Xlx"/>
+                            <constraint firstItem="1ar-wj-Dxf" firstAttribute="trailing" secondItem="hqZ-2m-7mj" secondAttribute="trailing" constant="20" id="IWs-yU-a3Y"/>
                             <constraint firstItem="A2g-f3-bP2" firstAttribute="trailing" secondItem="1ar-wj-Dxf" secondAttribute="trailing" id="PRt-6W-4il"/>
                             <constraint firstItem="A2g-f3-bP2" firstAttribute="top" secondItem="qih-hd-CPx" secondAttribute="top" id="RvB-xG-J4w"/>
+                            <constraint firstItem="IbI-Zy-LcE" firstAttribute="top" secondItem="1ar-wj-Dxf" secondAttribute="top" id="aG6-ca-bXY"/>
+                            <constraint firstItem="hqZ-2m-7mj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IbI-Zy-LcE" secondAttribute="trailing" id="dpP-l0-5N2"/>
+                            <constraint firstItem="IbI-Zy-LcE" firstAttribute="leading" secondItem="1ar-wj-Dxf" secondAttribute="leading" constant="20" id="l5z-wA-hNe"/>
                             <constraint firstItem="A2g-f3-bP2" firstAttribute="leading" secondItem="1ar-wj-Dxf" secondAttribute="leading" id="rYQ-Pt-ZIe"/>
                             <constraint firstAttribute="bottom" secondItem="A2g-f3-bP2" secondAttribute="bottom" id="z5c-JF-a8w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ar-wj-Dxf"/>
                     </view>
                     <connections>
+                        <outlet property="returnButton" destination="IbI-Zy-LcE" id="jlW-Vv-NM2"/>
                         <outlet property="sceneView" destination="A2g-f3-bP2" id="IRt-GX-Jhx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCt-lv-xT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="-850"/>
+            <point key="canvasLocation" x="169.56521739130437" y="-850.44642857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Zfo-fE-R1E">
