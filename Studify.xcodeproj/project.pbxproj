@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1CEAF4217F44F7002BCAC5 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEAF3217F44F7002BCAC5 /* Plane.swift */; };
+		AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEAF6217F8433002BCAC5 /* Utilities.swift */; };
+		AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
+		AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
+		AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */; };
+		AA6D54CD2174D47200730309 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
+		AA6D54CF2174DD0900730309 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
+		AA6D54D22174E46A00730309 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D12174E46A00730309 /* Lesson.swift */; };
+		AA6D54D421761FE400730309 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D321761FE400730309 /* BlurButton.swift */; };
+		AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D5217626C700730309 /* BigCoverButton.swift */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416DB216673BD00006A3F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DA216673BD00006A3F /* art.scnassets */; };
 		AAD416DD216673BD00006A3F /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ARController.swift */; };
@@ -35,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA1CEAF3217F44F7002BCAC5 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		AA1CEAF6217F8433002BCAC5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
+		AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
+		AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewCell.swift; sourceTree = "<group>"; };
+		AA6D54CC2174D47200730309 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
+		AA6D54D12174E46A00730309 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		AA6D54D321761FE400730309 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
+		AA6D54D5217626C700730309 /* BigCoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCoverButton.swift; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DA216673BD00006A3F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -76,6 +96,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA1CEAF2217F4430002BCAC5 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AA1CEAF3217F44F7002BCAC5 /* Plane.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		AA1CEAF5217F841B002BCAC5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA1CEAF6217F8433002BCAC5 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AA4BFE6C2170C815004FC4BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
+				AAD416DC216673BD00006A3F /* ARController.swift */,
+				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
+				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
+				AA6D54CC2174D47200730309 /* ARViewController.swift */,
+				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AA4BFE732170C9A5004FC4BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
+				AAD416DE216673BD00006A3F /* Main.storyboard */,
+				AA6D54D321761FE400730309 /* BlurButton.swift */,
+				AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */,
+				AA6D54D5217626C700730309 /* BigCoverButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA6D54D02174E45200730309 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA6D54D12174E46A00730309 /* Lesson.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		AAD416CC216673BC00006A3F = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +168,13 @@
 		AAD416D7216673BD00006A3F /* Studify */ = {
 			isa = PBXGroup;
 			children = (
-				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
+				AA1CEAF5217F841B002BCAC5 /* Utilities */,
+				AA1CEAF2217F4430002BCAC5 /* Objects */,
+				AA6D54D02174E45200730309 /* Data */,
+				AA4BFE732170C9A5004FC4BD /* Views */,
+				AA4BFE6C2170C815004FC4BD /* ViewControllers */,
 				AAD416DA216673BD00006A3F /* art.scnassets */,
-				AAD416DC216673BD00006A3F /* ARController.swift */,
-				AAD416DE216673BD00006A3F /* Main.storyboard */,
 				AAD416E1216673BD00006A3F /* Assets.xcassets */,
-				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
 				AAD416E6216673BD00006A3F /* Info.plist */,
 			);
 			path = Studify;
@@ -260,8 +330,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
+				AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */,
 				AAD416DD216673BD00006A3F /* ARController.swift in Sources */,
+				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
+				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
+				AA6D54CF2174DD0900730309 /* LessonDetailViewController.swift in Sources */,
+				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
+				AA6D54CD2174D47200730309 /* ARViewController.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
+				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
+				AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */,
+				AA1CEAF4217F44F7002BCAC5 /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
