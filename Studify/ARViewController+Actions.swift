@@ -1,53 +1,18 @@
 //
-//  ARViewController.swift
+//  ARViewController+Actions.swift
 //  Studify
 //
-//  Created by Jakub Nadolny on 15/10/2018.
+//  Created by Jakub Nadolny on 31/10/2018.
 //  Copyright © 2018 Jakub Nadolny. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import ARKit
-import SceneKit
 
-class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
-
-    @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var returnButton: UIButton!
-    
-    var object:SCNNode?
-    
-    var currentRotation:Float = 0
-    
-    var screenCenter: CGPoint {
-        let bounds = sceneView.bounds
-        return CGPoint(x: bounds.midX, y: bounds.midY)
-    }
+extension ARViewController{
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-        configuration.environmentTexturing = .automatic
-        setupCamera()
-        sceneView.session.run(configuration)
-        sceneView.delegate = self
-        sceneView.session.delegate = self
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addGestureToSceneView()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        sceneView.session.pause()
     }
     
     @objc func addAircraft(widhGestureRecognizer recognizer:UIGestureRecognizer){
@@ -101,35 +66,13 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         SCNTransaction.commit()
     }
     
-    func addGestureToSceneView(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addAircraft(widhGestureRecognizer:)))
-        sceneView.addGestureRecognizer(tap)
-        tap.numberOfTapsRequired = 1
-        
-        let rotate = UIPanGestureRecognizer(target: self, action: #selector(ARViewController.rotateAirCraft(withGestureRecognizer:)))
-        rotate.minimumNumberOfTouches = 2
-        rotate.maximumNumberOfTouches = 3
-        
-        sceneView.addGestureRecognizer(rotate)
-    }
-    
-    func setupCamera() {
-        guard let camera = sceneView.pointOfView?.camera else {
-            fatalError("Expected a valid `pointOfView` from the scene.")
-        }
-        
-        camera.wantsHDR = true
-        camera.exposureOffset = -1
-        camera.minimumExposure = -1
-        camera.maximumExposure = 3
-    }
-
     func animate(duration:Double, angle:CGFloat) -> SCNAction{
+        let resetRotation = SCNAction.rotateTo(x: 0, y: 0, z: angle * -1.0, duration: 0)
         let moveRight = SCNAction.rotateTo(x: 0, y: 0, z: angle, duration: duration/2)
         moveRight.timingMode = .easeInEaseOut
         let moveLeft = SCNAction.rotateTo(x: 0, y: 0, z: angle * -1.0, duration: duration/2)
         moveLeft.timingMode = .easeInEaseOut
-        let moveSequence = SCNAction.sequence([moveRight, moveLeft])
+        let moveSequence = SCNAction.sequence([resetRotation, moveRight, moveLeft])
         let moveLoop = SCNAction.repeatForever(moveSequence)
         
         return moveLoop
@@ -139,5 +82,4 @@ class ARViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         let g = Double(9.80665)
         return 2*Double.pi * sqrt(lenght / g)
     }
-
 }
