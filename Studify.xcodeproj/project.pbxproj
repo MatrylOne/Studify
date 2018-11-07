@@ -28,6 +28,7 @@
 		AAD416E5216673BD00006A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */; };
 		AAD416F0216673BD00006A3F /* StudifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416EF216673BD00006A3F /* StudifyTests.swift */; };
 		AAD416FB216673BD00006A3F /* StudifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416FA216673BD00006A3F /* StudifyUITests.swift */; };
+		AADF6C07219342ED00B7C32C /* PhysicalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADF6C06219342ED00B7C32C /* PhysicalScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		AAD416F6216673BD00006A3F /* StudifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416FA216673BD00006A3F /* StudifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudifyUITests.swift; sourceTree = "<group>"; };
 		AAD416FC216673BD00006A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADF6C06219342ED00B7C32C /* PhysicalScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		AAD416D7216673BD00006A3F /* Studify */ = {
 			isa = PBXGroup;
 			children = (
+				AADF6C05219342DD00B7C32C /* Scenes */,
 				AA3D7A4F2189F2AB009DBCCD /* FocusSquare */,
 				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
 				AA6D54CC2174D47200730309 /* ARViewController.swift */,
@@ -213,6 +216,14 @@
 				AAD416FC216673BD00006A3F /* Info.plist */,
 			);
 			path = StudifyUITests;
+			sourceTree = "<group>";
+		};
+		AADF6C05219342DD00B7C32C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				AADF6C06219342ED00B7C32C /* PhysicalScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
 				AA6D54CF2174DD0900730309 /* LessonDetailViewController.swift in Sources */,
 				AA0F03A12189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
+				AADF6C07219342ED00B7C32C /* PhysicalScene.swift in Sources */,
 				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
 				AA6D54CD2174D47200730309 /* ARViewController.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
