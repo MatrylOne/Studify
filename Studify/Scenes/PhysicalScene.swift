@@ -8,7 +8,7 @@
 
 import SceneKit
 
-public class PhysicsScene: SCNScene {
+public class PhysicalScene: SCNScene {
     public init(length: CGFloat) {
         super.init()
         initScene(length: length)
@@ -89,7 +89,6 @@ public class PhysicsScene: SCNScene {
         // Names
         
         handle.name = "handle"
-        holderNode.name = "holder"
         
         // Positioning
         
@@ -127,6 +126,7 @@ public class PhysicsScene: SCNScene {
         node.addChildNode(handle)
         node.addChildNode(holderNode)
         node.addChildNode(basePlateNode)
+        node.name = "physical"
         
         return node
     }
@@ -138,6 +138,8 @@ public class PhysicsScene: SCNScene {
         rightAction.timingMode = .easeInEaseOut
         let sequence = SCNAction.sequence([leftAction, rightAction])
         let action = SCNAction.repeatForever(sequence)
+        
+        print("Okres wynosi \(time)")
         
         return action
     }

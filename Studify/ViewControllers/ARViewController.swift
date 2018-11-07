@@ -49,11 +49,11 @@ class ARViewController: UIViewController{
     }
     
     func addGestureToSceneView(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addAircraft(widhGestureRecognizer:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addNode(widhGestureRecognizer:)))
         sceneView.addGestureRecognizer(tap)
         tap.numberOfTapsRequired = 1
         
-        let rotate = UIPanGestureRecognizer(target: self, action: #selector(ARViewController.rotateAirCraft(withGestureRecognizer:)))
+        let rotate = UIPanGestureRecognizer(target: self, action: #selector(ARViewController.rotateNode(withGestureRecognizer:)))
         rotate.minimumNumberOfTouches = 2
         rotate.maximumNumberOfTouches = 3
         

@@ -15,19 +15,21 @@ extension ARViewController{
         dismiss(animated: true)
     }
     
-    @objc func addAircraft(widhGestureRecognizer recognizer:UIGestureRecognizer){
+    @objc func addNode(widhGestureRecognizer recognizer:UIGestureRecognizer){
         let position = focusSquare.handle.position
         
         if object == nil{
             DispatchQueue.main.async {
-                guard let loadedScene = SCNScene(named: "art.scnassets/physical.scn"),
-                    let loadedNode = loadedScene.rootNode.childNodes.first
-                    else {return}
+                let random = CGFloat(arc4random_uniform(100) + 5)/100
+                print("linka ma \(random) metrów")
+                let loadedScene = PhysicalScene(length: random)
+                guard let loadedNode = loadedScene.rootNode.childNode(withName: "physical", recursively: false) else {
+                    return
+                }
                 
                 let object = VirtualObject()
                 object.addChildNode(loadedNode)
                 object.move(to: position, animated: false)
-                object.animateHandle()
                 object.anchor = self.focusSquare.anchor
                 self.object = object
                 self.sceneView.scene.rootNode.addChildNode(object)
@@ -38,7 +40,7 @@ extension ARViewController{
         }
     }
     
-    @objc func rotateAirCraft(withGestureRecognizer recognizer:UIPanGestureRecognizer){
+    @objc func rotateNode(withGestureRecognizer recognizer:UIPanGestureRecognizer){
         guard let node = object else { return }
         let translation = recognizer.translation(in: sceneView)
         let angleY = (Float)(translation.x) * (Float)(Double.pi) / 180.0
@@ -48,5 +50,9 @@ extension ARViewController{
         }else if recognizer.state == .ended{
             node.rotateY(by: angleY, animated: true, final: true)
         }
+    }
+    
+    @IBAction func timerTouched(_ sender: UIButton) {
+        
     }
 }
