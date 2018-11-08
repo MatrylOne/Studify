@@ -24,7 +24,6 @@
 		AAC1966221935C95001E4A70 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
-		AAD416DB216673BD00006A3F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DA216673BD00006A3F /* art.scnassets */; };
 		AAD416DD216673BD00006A3F /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ARController.swift */; };
 		AAD416E0216673BD00006A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DE216673BD00006A3F /* Main.storyboard */; };
 		AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E1216673BD00006A3F /* Assets.xcassets */; };
@@ -68,7 +67,6 @@
 		AAC196642193618C001E4A70 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAD416DA216673BD00006A3F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		AAD416DC216673BD00006A3F /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		AAD416DF216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAD416E1216673BD00006A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +109,8 @@
 		AA0F03A62189DCE9004C3552 /* Virtual Objects */ = {
 			isa = PBXGroup;
 			children = (
+				AADF6C06219342ED00B7C32C /* PhysicalScene.swift */,
+				AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */,
 				AA0F03A72189DD01004C3552 /* VirtualObject.swift */,
 			);
 			path = "Virtual Objects";
@@ -122,14 +122,6 @@
 				AA1CEAF6217F8433002BCAC5 /* Utilities.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		AA3D7A4F2189F2AB009DBCCD /* FocusSquare */ = {
-			isa = PBXGroup;
-			children = (
-				AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */,
-			);
-			path = FocusSquare;
 			sourceTree = "<group>";
 		};
 		AA4BFE6C2170C815004FC4BD /* ViewControllers */ = {
@@ -149,7 +141,6 @@
 		AA4BFE732170C9A5004FC4BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
 				AA6D54D321761FE400730309 /* BlurButton.swift */,
 				AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */,
 				AA6D54D5217626C700730309 /* BigCoverButton.swift */,
@@ -171,6 +162,15 @@
 				AAC196642193618C001E4A70 /* tick.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		AAC196662194228E001E4A70 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AAD416E1216673BD00006A3F /* Assets.xcassets */,
+				AAC196632193617D001E4A70 /* Sounds */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		AAD416CC216673BC00006A3F = {
@@ -196,18 +196,15 @@
 		AAD416D7216673BD00006A3F /* Studify */ = {
 			isa = PBXGroup;
 			children = (
-				AAC196632193617D001E4A70 /* Sounds */,
-				AAD416DE216673BD00006A3F /* Main.storyboard */,
 				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
-				AADF6C05219342DD00B7C32C /* Scenes */,
-				AA3D7A4F2189F2AB009DBCCD /* FocusSquare */,
+				AAD416DE216673BD00006A3F /* Main.storyboard */,
+				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
 				AA6D54D02174E45200730309 /* Data */,
 				AA0F03A62189DCE9004C3552 /* Virtual Objects */,
 				AA4BFE732170C9A5004FC4BD /* Views */,
 				AA4BFE6C2170C815004FC4BD /* ViewControllers */,
 				AA1CEAF5217F841B002BCAC5 /* Utilities */,
-				AAD416DA216673BD00006A3F /* art.scnassets */,
-				AAD416E1216673BD00006A3F /* Assets.xcassets */,
+				AAC196662194228E001E4A70 /* Assets */,
 				AAD416E6216673BD00006A3F /* Info.plist */,
 			);
 			path = Studify;
@@ -229,14 +226,6 @@
 				AAD416FC216673BD00006A3F /* Info.plist */,
 			);
 			path = StudifyUITests;
-			sourceTree = "<group>";
-		};
-		AADF6C05219342DD00B7C32C /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				AADF6C06219342ED00B7C32C /* PhysicalScene.swift */,
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD416DB216673BD00006A3F /* art.scnassets in Resources */,
 				AAD416E5216673BD00006A3F /* LaunchScreen.storyboard in Resources */,
 				AAC196652193618C001E4A70 /* tick.mp3 in Resources */,
 				AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */,
