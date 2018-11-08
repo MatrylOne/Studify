@@ -15,10 +15,7 @@ class ARViewController: UIViewController{
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var returnButton: UIButton!
     
-    lazy var screenCenter: CGPoint = {
-        return CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
-    }()
-    
+    var screenCenter = CGPoint.zero
     var object:VirtualObject?
     
     let focusSquare = FocusSquare()
@@ -29,6 +26,7 @@ class ARViewController: UIViewController{
         setupCamera()
         setupAR()
         
+        screenCenter = CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
         sceneView.scene.rootNode.addChildNode(focusSquare)
     }
     
@@ -72,22 +70,5 @@ class ARViewController: UIViewController{
         camera.exposureOffset = -1
         camera.minimumExposure = -1
         camera.maximumExposure = 3
-    }
-    
-    func updateFocusSquare(){
-        let hitTests = sceneView.hitTest(screenCenter, types: .existingPlaneUsingExtent)
-        guard let result = hitTests.first,
-        let frame = sceneView.session.currentFrame else { return }
-        
-        let position = result.worldTransform.translation
-        let vector = SCNVector3(position.x, position.y, position.z)
-        let camera = frame.camera
-        
-        focusSquare.updateOrientatnion(to: vector, camera: camera)
-        focusSquare.anchor = result.anchor
-        if focusSquare.isInitiated == false{
-            focusSquare.show()
-            focusSquare.isInitiated = true
-        }
     }
 }

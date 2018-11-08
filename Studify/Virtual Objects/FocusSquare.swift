@@ -42,6 +42,10 @@ class FocusSquare: SCNNode{
     }
     
     func updateOrientatnion(to position:SCNVector3, camera:ARCamera){
+        if self.isInitiated == false{
+            show()
+            isInitiated = true
+        }
         self.position = position
         self.eulerAngles.y = camera.eulerAngles.y
     }

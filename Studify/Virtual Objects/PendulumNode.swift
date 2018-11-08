@@ -13,8 +13,7 @@ class PendulumNode: SCNNode {
     
     let length:CGFloat
     var lastRotation:Float = 0
-    
-    let playTick = SCNAction.playAudio(SCNAudioSource(fileNamed: "tick.mp3")!, waitForCompletion: false)
+    let tickSound = SCNAction.playAudio(SCNAudioSource(fileNamed: "tick.mp3")!, waitForCompletion: false)
     
     init(length: CGFloat){
         self.length = length
@@ -78,16 +77,11 @@ class PendulumNode: SCNNode {
         rightLegNode.position.y = Float(height/2) + Float(basePlateHeight)
         
         basePlateNode.position.y = Float(basePlateHeight/2)
-        
-        lineNode.position.y = -1 * Float(length)/2
-        
         ballNode.position.y = -1 * Float(length)
-        
-        handle.position.y = Float(height) + Float(basePlateHeight)
-        
-        holderNode.position.y = Float(height) + Float(frameThickness/2) +  Float(basePlateHeight)
-        
         checkerNode.position.y = Float(basePlateHeight/2) + Float(checkerHeight/2)
+        handle.position.y = Float(height) + Float(basePlateHeight)
+        holderNode.position.y = Float(height) + Float(frameThickness/2) +  Float(basePlateHeight)
+        lineNode.position.y = -1 * Float(length)/2
         
         // Materials
         checker.firstMaterial?.diffuse.contents = UIColor.red
@@ -118,7 +112,7 @@ class PendulumNode: SCNNode {
         let currentRotation = handle.eulerAngles.z
         if self.lastRotation > 0 && currentRotation < 0{
             DispatchQueue.main.async {
-                self.runAction(self.playTick)
+                self.runAction(self.tickSound)
             }
         }
         self.lastRotation = currentRotation

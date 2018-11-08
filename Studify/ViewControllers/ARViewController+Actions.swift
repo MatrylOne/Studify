@@ -55,4 +55,17 @@ extension ARViewController{
     @IBAction func timerTouched(_ sender: UIButton) {
         
     }
+    
+    func updateFocusSquare(){
+        let hitTests = sceneView.hitTest(screenCenter, types: .existingPlaneUsingExtent)
+        guard let result = hitTests.first,
+            let frame = sceneView.session.currentFrame else { return }
+        
+        let position = result.worldTransform.translation
+        let vector = SCNVector3(position.x, position.y, position.z)
+        let camera = frame.camera
+        
+        focusSquare.updateOrientatnion(to: vector, camera: camera)
+        focusSquare.anchor = result.anchor
+    }
 }
