@@ -21,18 +21,13 @@ extension ARViewController{
         if object == nil{
             DispatchQueue.main.async {
                 let random = CGFloat(arc4random_uniform(100) + 5)/100
-                print("linka ma \(random) metrów")
-                let loadedScene = PhysicalScene(length: random)
-                guard let loadedNode = loadedScene.rootNode.childNode(withName: "physical", recursively: false) else {
-                    return
-                }
-                
-                let object = VirtualObject()
-                object.addChildNode(loadedNode)
+                let pendulum = PendulumNode(length: random)
+                let object = VirtualObject(withNode: pendulum)
                 object.move(to: position, animated: false)
                 object.anchor = self.focusSquare.anchor
                 self.object = object
                 self.sceneView.scene.rootNode.addChildNode(object)
+                pendulum.animate()
             }
         }else{
             object?.move(to: position, animated: true)

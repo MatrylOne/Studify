@@ -10,10 +10,21 @@ import Foundation
 import SceneKit
 import ARKit
 
-class VirtualObject: SCNReferenceNode{
+class VirtualObject: SCNNode{
+    var node: SCNNode?
     var anchor: ARAnchor?
     var lastRotation:Float = 0
     var isRotationPositive = true
+    
+    init(withNode node: SCNNode){
+        self.node = node
+        super.init()
+        addChildNode(node)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func rotateY(by rotation: Float, animated:Bool, final:Bool) {
         

@@ -1,57 +1,35 @@
 //
-//  PhysicalScene.swift
+//  PendulumNode.swift
 //  Studify
 //
-//  Created by Jakub Nadolny on 07/11/2018.
+//  Created by Jakub Nadolny on 08/11/2018.
 //  Copyright © 2018 Jakub Nadolny. All rights reserved.
 //
 
+import UIKit
 import SceneKit
 
-public class PhysicalScene: SCNScene {
-    public init(length: CGFloat) {
+class PendulumNode: SCNNode {
+    
+    let length:CGFloat
+    
+    init(length: CGFloat){
+        self.length = length
         super.init()
-        initScene(length: length)
+        addChildNode(build(length: self.length))
     }
     
-    public override init() {
+    override init() {
+        self.length = 0.2
         super.init()
-        initScene(length: 0.3)
+        addChildNode(build(length: self.length))
     }
     
-    private func initScene(length: CGFloat){
-        
-        let time = countTime(length: Float(length))
-        let object = createPhisical(length: length)
-        
-        createCamera()
-        rootNode.addChildNode(object)
-        
-        if let handle = object.childNode(withName: "handle", recursively: true){
-            handle.runAction(createAnimation(time: time, angle: .pi/30))
-        }
-        
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    private func createCamera(){
-        let camera = SCNCamera()
-        let cameraNode = SCNNode()
-        cameraNode.camera = camera
-        camera.focalLength = 300
-        self.rootNode.addChildNode(cameraNode)
-        cameraNode.position = SCNVector3(0, 0, 3)
-    }
-    
-    private func countTime(length: Float) -> Float{
-        return 2 * Float.pi * sqrtf(length/9.8)
-    }
-    
-    public func createPhisical(length: CGFloat) -> SCNNode{
-        
+    public func build(length: CGFloat) -> SCNNode{
         // Properties
         let ballSize = CGFloat(0.02)
         let checkerHeight = 0.002
@@ -61,7 +39,6 @@ public class PhysicalScene: SCNScene {
         let frameWidth = ballSize * 4
         
         // Nodes
-        
         let node = SCNNode()
         let handle = SCNNode()
         
@@ -87,11 +64,9 @@ public class PhysicalScene: SCNScene {
         let lineNode = SCNNode(geometry: line)
         
         // Names
-        
         handle.name = "handle"
         
         // Positioning
-        
         leftLegNode.position.z = Float(-frameWidth/2)
         leftLegNode.position.y = Float(height/2) + 1.5 * Float(basePlateHeight)
         
@@ -126,12 +101,22 @@ public class PhysicalScene: SCNScene {
         node.addChildNode(handle)
         node.addChildNode(holderNode)
         node.addChildNode(basePlateNode)
-        node.name = "physical"
+        node.name = "pendulum"
         
         return node
     }
     
-    public func createAnimation(time:Float, angle:Float) -> SCNAction{
+    public func animate(){
+        guard let pendulum = childNode(withName: "pendulum", recursively: false),
+            let handle = pendulum.childNode(withName: "handle", recursively: false)
+            else { return }
+        
+        let time = calculateTime(length: self.length)
+        
+        handle.runAction(createAnimation(time: time, angle: CGFloat.pi/40))
+    }
+    
+    private func createAnimation(time:CGFloat, angle:CGFloat) -> SCNAction{
         let leftAction = SCNAction.rotateTo(x: 0, y: 0, z: CGFloat(angle), duration: Double(time/2))
         leftAction.timingMode = .easeInEaseOut
         let rightAction = SCNAction.rotateTo(x: 0, y: 0, z: CGFloat(angle * -1), duration: Double(time/2))
@@ -144,5 +129,7 @@ public class PhysicalScene: SCNScene {
         return action
     }
     
-    
+    private func calculateTime(length: CGFloat) -> CGFloat{
+        return 2 * CGFloat.pi * sqrt(length/9.8)
+    }
 }

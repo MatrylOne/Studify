@@ -218,7 +218,7 @@
                                     <action selector="close:" destination="ctP-92-R61" eventType="touchUpInside" id="Zgc-5o-lYu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-cv-qMy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Il-cv-qMy" customClass="BlurButton" customModule="Studify" customModuleProvider="target">
                                 <rect key="frame" x="312" y="748" width="43" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Hs6-Ez-JQ7"/>
