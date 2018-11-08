@@ -21,9 +21,6 @@ extension ARViewController: ARSCNViewDelegate, ARSessionDelegate{
             let lengthFromNode = (object.position - focusSquare.position).length()
             let lengthFromCamera = (focusSquare.position - SCNVector3(camera.transform.translation)).length()
             
-            print(lengthFromCamera)
-            
-            
             if lengthFromNode < 0.2 || lengthFromCamera > 2 {
                 focusSquare.hide()
             }else{

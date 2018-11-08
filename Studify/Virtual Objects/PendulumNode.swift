@@ -34,10 +34,11 @@ class PendulumNode: SCNNode {
     
     public func build(length: CGFloat) -> SCNNode{
         // Properties
-        let ballSize = CGFloat(0.02)
-        let checkerHeight = 0.002
-        let basePlateHeight = 0.01
-        let frameThickness = CGFloat(0.005)
+        let ballSize = Settings.Pendulum.ballSize
+        let checkerHeight = Settings.Pendulum.checkerHeight
+        let basePlateHeight = Settings.Pendulum.basePlateHeight
+        let frameThickness = Settings.Pendulum.frameThickness
+        
         let height = length + ballSize + CGFloat(checkerHeight)
         let frameWidth = ballSize * 4
         
@@ -60,7 +61,7 @@ class PendulumNode: SCNNode {
         let holder = SCNBox(width: frameThickness, height: frameThickness, length: frameWidth + frameThickness, chamferRadius: frameThickness/8)
         let holderNode = SCNNode(geometry: holder)
         
-        let ball = SCNSphere(radius: CGFloat(ballSize))
+        let ball = SCNSphere(radius: ballSize)
         let ballNode = SCNNode(geometry: ball)
         
         let line = SCNCylinder(radius: 0.001, height: length)
@@ -71,20 +72,20 @@ class PendulumNode: SCNNode {
         
         // Positioning
         leftLegNode.position.z = Float(-frameWidth/2)
-        leftLegNode.position.y = Float(height/2) + 1.5 * Float(basePlateHeight)
+        leftLegNode.position.y = Float(height/2) + Float(basePlateHeight)
         
         rightLegNode.position.z = Float(frameWidth/2)
-        rightLegNode.position.y = Float(height/2) + 1.5 * Float(basePlateHeight)
+        rightLegNode.position.y = Float(height/2) + Float(basePlateHeight)
         
-        basePlateNode.position.y = Float(basePlateHeight)
+        basePlateNode.position.y = Float(basePlateHeight/2)
         
         lineNode.position.y = -1 * Float(length)/2
         
         ballNode.position.y = -1 * Float(length)
         
-        handle.position.y = Float(height) + 1.5 * Float(basePlateHeight)
+        handle.position.y = Float(height) + Float(basePlateHeight)
         
-        holderNode.position.y = Float(height) + Float(frameThickness/2) + 1.5 * Float(basePlateHeight)
+        holderNode.position.y = Float(height) + Float(frameThickness/2) +  Float(basePlateHeight)
         
         checkerNode.position.y = Float(basePlateHeight/2) + Float(checkerHeight/2)
         
@@ -114,10 +115,8 @@ class PendulumNode: SCNNode {
             let handle = pendulum.childNode(withName: "handle", recursively: false)
             else { return }
         
-        print("after guard")
         let currentRotation = handle.eulerAngles.z
         if self.lastRotation > 0 && currentRotation < 0{
-            print("tick sound")
             DispatchQueue.main.async {
                 self.runAction(self.playTick)
             }
@@ -131,8 +130,9 @@ class PendulumNode: SCNNode {
             else { return }
         
         let time = calculateTime(length: self.length)
+        let angle = Settings.Pendulum.angle
         
-        handle.runAction(createAnimation(time: time, angle: CGFloat.pi/40))
+        handle.runAction(createAnimation(time: time, angle: angle))
     }
     
     private func createAnimation(time:CGFloat, angle:CGFloat) -> SCNAction{
@@ -142,8 +142,6 @@ class PendulumNode: SCNNode {
         rightAction.timingMode = .easeInEaseOut
         let sequence = SCNAction.sequence([leftAction, rightAction])
         let action = SCNAction.repeatForever(sequence)
-        
-        print("Okres wynosi \(time)")
         
         return action
     }
