@@ -15,7 +15,9 @@ class ARViewController: UIViewController{
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var returnButton: UIButton!
     
-    var screenCenter = CGPoint(x: 0, y: 0)
+    lazy var screenCenter: CGPoint = {
+        return CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
+    }()
     
     var object:VirtualObject?
     
@@ -24,18 +26,10 @@ class ARViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-        configuration.environmentTexturing = .automatic
-        
         setupCamera()
-        
-        sceneView.session.run(configuration)
-        sceneView.delegate = self
-        sceneView.session.delegate = self
+        setupAR()
         
         sceneView.scene.rootNode.addChildNode(focusSquare)
-        screenCenter = CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
     }
     
     override func viewDidLoad() {
@@ -46,6 +40,15 @@ class ARViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+    }
+    
+    func setupAR(){
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        configuration.environmentTexturing = .automatic
+        sceneView.delegate = self
+        sceneView.session.delegate = self
+        sceneView.session.run(configuration)
     }
     
     func addGestureToSceneView(){
@@ -82,5 +85,9 @@ class ARViewController: UIViewController{
         
         focusSquare.updateOrientatnion(to: vector, camera: camera)
         focusSquare.anchor = result.anchor
+        if focusSquare.isInitiated == false{
+            focusSquare.show()
+            focusSquare.isInitiated = true
+        }
     }
 }

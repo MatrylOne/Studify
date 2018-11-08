@@ -12,6 +12,9 @@ import SceneKit
 class PendulumNode: SCNNode {
     
     let length:CGFloat
+    var lastRotation:Float = 0
+    
+    let playTick = SCNAction.playAudio(SCNAudioSource(fileNamed: "tick.mp3")!, waitForCompletion: false)
     
     init(length: CGFloat){
         self.length = length
@@ -104,6 +107,22 @@ class PendulumNode: SCNNode {
         node.name = "pendulum"
         
         return node
+    }
+    
+    public func tickOnZero(){
+        guard let pendulum = childNode(withName: "pendulum", recursively: false),
+            let handle = pendulum.childNode(withName: "handle", recursively: false)
+            else { return }
+        
+        print("after guard")
+        let currentRotation = handle.eulerAngles.z
+        if self.lastRotation > 0 && currentRotation < 0{
+            print("tick sound")
+            DispatchQueue.main.async {
+                self.runAction(self.playTick)
+            }
+        }
+        self.lastRotation = currentRotation
     }
     
     public func animate(){

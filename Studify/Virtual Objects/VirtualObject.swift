@@ -13,8 +13,7 @@ import ARKit
 class VirtualObject: SCNNode{
     var node: SCNNode?
     var anchor: ARAnchor?
-    var lastRotation:Float = 0
-    var isRotationPositive = true
+    private var lastRotation:Float = 0
     
     init(withNode node: SCNNode){
         self.node = node

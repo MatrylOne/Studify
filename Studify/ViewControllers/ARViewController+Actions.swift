@@ -16,22 +16,24 @@ extension ARViewController{
     }
     
     @objc func addNode(widhGestureRecognizer recognizer:UIGestureRecognizer){
-        let position = focusSquare.handle.position
-        
-        if object == nil{
-            DispatchQueue.main.async {
-                let random = CGFloat(arc4random_uniform(100) + 5)/100
-                let pendulum = PendulumNode(length: random)
-                let object = VirtualObject(withNode: pendulum)
-                object.move(to: position, animated: false)
-                object.anchor = self.focusSquare.anchor
-                self.object = object
-                self.sceneView.scene.rootNode.addChildNode(object)
-                pendulum.animate()
+        if focusSquare.isHiden == false{
+            let position = focusSquare.position
+            
+            if object == nil{
+                DispatchQueue.main.async {
+                    let random = CGFloat(arc4random_uniform(100) + 5)/100
+                    let pendulum = PendulumNode(length: random)
+                    let object = VirtualObject(withNode: pendulum)
+                    object.move(to: position, animated: false)
+                    object.anchor = self.focusSquare.anchor
+                    self.object = object
+                    self.sceneView.scene.rootNode.addChildNode(object)
+                    pendulum.animate()
+                }
+            }else{
+                object?.move(to: position, animated: true)
+                object?.anchor = focusSquare.anchor
             }
-        }else{
-            object?.move(to: position, animated: true)
-            object?.anchor = focusSquare.anchor
         }
     }
     

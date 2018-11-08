@@ -12,16 +12,22 @@ import ARKit
 extension ARViewController: ARSCNViewDelegate, ARSessionDelegate{
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         self.updateFocusSquare()
-        if let node = self.object{
-            if let handle = node.childNode(withName: "handle", recursively: true){
-                let currentRotation = handle.eulerAngles.z
-                if node.lastRotation > 0 && currentRotation < 0{
-                    let audio = SCNAudioSource(fileNamed: "tick.mp3")!
-                    let play = SCNAction.playAudio(audio, waitForCompletion: false)
-                    node.runAction(play)
-                    
-                }
-                node.lastRotation = currentRotation
+        
+        if let object = self.object, let pendulum = object.node as? PendulumNode{
+            pendulum.tickOnZero()
+            
+            guard let frame = sceneView.session.currentFrame else { return }
+            let camera = frame.camera
+            let lengthFromNode = (object.position - focusSquare.position).length()
+            let lengthFromCamera = (focusSquare.position - SCNVector3(camera.transform.translation)).length()
+            
+            print(lengthFromCamera)
+            
+            
+            if lengthFromNode < 0.2 || lengthFromCamera > 2 {
+                focusSquare.hide()
+            }else{
+                focusSquare.show()
             }
         }
     }

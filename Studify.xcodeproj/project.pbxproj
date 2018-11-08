@@ -7,25 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0F03A12189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */; };
-		AA0F03A52189D582004C3552 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */; };
 		AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A72189DD01004C3552 /* VirtualObject.swift */; };
 		AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEAF6217F8433002BCAC5 /* Utilities.swift */; };
 		AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */; };
-		AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
-		AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
 		AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */; };
-		AA6D54CF2174DD0900730309 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
 		AA6D54D22174E46A00730309 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D12174E46A00730309 /* Lesson.swift */; };
 		AA6D54D421761FE400730309 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D321761FE400730309 /* BlurButton.swift */; };
 		AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D5217626C700730309 /* BigCoverButton.swift */; };
-		AAC1966021935C94001E4A70 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
-		AAC1966121935C94001E4A70 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
-		AAC1966221935C95001E4A70 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1966721942382001E4A70 /* PendulumNode.swift */; };
+		AAC911EA219453BC007BE3B4 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
+		AAC911EB219453BC007BE3B4 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */; };
+		AAC911EC219453BC007BE3B4 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */; };
+		AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
+		AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
+		AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
-		AAD416DD216673BD00006A3F /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416DC216673BD00006A3F /* ARController.swift */; };
 		AAD416E0216673BD00006A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DE216673BD00006A3F /* Main.storyboard */; };
 		AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E1216673BD00006A3F /* Assets.xcassets */; };
 		AAD416E5216673BD00006A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */; };
@@ -68,7 +65,6 @@
 		AAC1966721942382001E4A70 /* PendulumNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumNode.swift; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAD416DC216673BD00006A3F /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		AAD416DF216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAD416E1216673BD00006A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD416E4216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,7 +126,6 @@
 				AA6D54CC2174D47200730309 /* ARViewController.swift */,
 				AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */,
 				AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */,
-				AAD416DC216673BD00006A3F /* ARController.swift */,
 				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
 				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
 				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
@@ -361,21 +356,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
-				AA4BFE702170C8B2004FC4BD /* LessonsViewController.swift in Sources */,
+				AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */,
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
-				AA0F03A52189D582004C3552 /* ARViewController+Actions.swift in Sources */,
-				AAC1966021935C94001E4A70 /* ARViewController.swift in Sources */,
-				AAD416DD216673BD00006A3F /* ARController.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
 				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
-				AA6D54CF2174DD0900730309 /* LessonDetailViewController.swift in Sources */,
-				AA0F03A12189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
+				AAC911EB219453BC007BE3B4 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
 				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
 				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
-				AA4BFE722170C8FB004FC4BD /* PatternsViewController.swift in Sources */,
+				AAC911EA219453BC007BE3B4 /* ARViewController.swift in Sources */,
+				AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */,
+				AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */,
+				AAC911EC219453BC007BE3B4 /* ARViewController+Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +378,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD416F0216673BD00006A3F /* StudifyTests.swift in Sources */,
-				AAC1966221935C95001E4A70 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD416FB216673BD00006A3F /* StudifyUITests.swift in Sources */,
-				AAC1966121935C94001E4A70 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
