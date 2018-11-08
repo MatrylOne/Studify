@@ -21,7 +21,10 @@ extension ARViewController{
             
             if object == nil{
                 DispatchQueue.main.async {
-                    let random = CGFloat(arc4random_uniform(100) + 5)/100
+                    let minHeight = Settings.Pendulum.minHeight
+                    let maxHeight = Settings.Pendulum.maxHeight
+                    
+                    let random = CGFloat(arc4random_uniform(maxHeight - minHeight) + minHeight)/100
                     let pendulum = PendulumNode(length: random)
                     let object = VirtualObject(withNode: pendulum)
                     object.move(to: position, animated: false)

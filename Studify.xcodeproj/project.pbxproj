@@ -14,6 +14,7 @@
 		AA6D54D22174E46A00730309 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D12174E46A00730309 /* Lesson.swift */; };
 		AA6D54D421761FE400730309 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D321761FE400730309 /* BlurButton.swift */; };
 		AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D5217626C700730309 /* BigCoverButton.swift */; };
+		AABAADB121946BC400ADBC3D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABAADB021946BC400ADBC3D /* Settings.swift */; };
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1966721942382001E4A70 /* PendulumNode.swift */; };
 		AAC911EA219453BC007BE3B4 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
@@ -61,6 +62,7 @@
 		AA6D54D12174E46A00730309 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		AA6D54D321761FE400730309 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
 		AA6D54D5217626C700730309 /* BigCoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCoverButton.swift; sourceTree = "<group>"; };
+		AABAADB021946BC400ADBC3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AAC196642193618C001E4A70 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		AAC1966721942382001E4A70 /* PendulumNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumNode.swift; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AA1CEAF6217F8433002BCAC5 /* Utilities.swift */,
+				AABAADB021946BC400ADBC3D /* Settings.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				AAC911EB219453BC007BE3B4 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
 				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
+				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,
 				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
 				AAC911EA219453BC007BE3B4 /* ARViewController.swift in Sources */,
 				AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */,
