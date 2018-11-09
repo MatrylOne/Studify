@@ -11,7 +11,8 @@ import SceneKit
 
 public class Settings{
     public class FocusSquare{
-        
+        static let width:CGFloat = 0.1
+        static let height:CGFloat = 0.1
     }
     
     public class Pendulum{

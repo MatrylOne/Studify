@@ -19,6 +19,7 @@ class ARViewController: UIViewController{
     var object:VirtualObject?
     
     let focusSquare = FocusSquare()
+    let model = MeasuresModel(pattern: PatternModel("T = 2 * PI * sqrt(l/g)"))
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -70,5 +71,11 @@ class ARViewController: UIViewController{
         camera.exposureOffset = -1
         camera.minimumExposure = -1
         camera.maximumExposure = 3
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMeasure"{
+            
+        }
     }
 }

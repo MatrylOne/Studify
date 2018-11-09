@@ -11,7 +11,6 @@ import UIKit
 private let reuseIdentifier = "cell"
 
 private let lessons = [
-    Lesson(name: "Grawitacja", description: "Lekcja o grawitacji", instruction: "Rzuć kulką", image:"gravity"),
     Lesson(name: "Ruch harmoniczny", description: "Lekcja o ruchu harmonicznym", instruction: "Rusz wahadłem", image:"gravity")
 ]
 

@@ -17,7 +17,7 @@ class FocusSquare: SCNNode{
     var isInitiated = false
     
     let plane: SCNNode = {
-        let plane = SCNPlane(width: 0.1, height: 0.1)
+        let plane = SCNPlane(width: Settings.FocusSquare.width, height: Settings.FocusSquare.height)
         let node = SCNNode(geometry: plane)
         node.opacity = 0
         let material = plane.firstMaterial!

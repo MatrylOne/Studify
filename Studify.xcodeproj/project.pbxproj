@@ -29,6 +29,9 @@
 		AAD416E5216673BD00006A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */; };
 		AAD416F0216673BD00006A3F /* StudifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416EF216673BD00006A3F /* StudifyTests.swift */; };
 		AAD416FB216673BD00006A3F /* StudifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416FA216673BD00006A3F /* StudifyUITests.swift */; };
+		AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */; };
+		AADC83D72195A33F002AE8E6 /* MeasuresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D62195A33F002AE8E6 /* MeasuresModel.swift */; };
+		AADC83D92195A3CB002AE8E6 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D82195A3CB002AE8E6 /* PatternModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		AAD416F6216673BD00006A3F /* StudifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416FA216673BD00006A3F /* StudifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudifyUITests.swift; sourceTree = "<group>"; };
 		AAD416FC216673BD00006A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresViewController.swift; sourceTree = "<group>"; };
+		AADC83D62195A33F002AE8E6 /* MeasuresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresModel.swift; sourceTree = "<group>"; };
+		AADC83D82195A3CB002AE8E6 /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
 				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
 				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
+				AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				AA6D54D12174E46A00730309 /* Lesson.swift */,
+				AADC83D62195A33F002AE8E6 /* MeasuresModel.swift */,
+				AADC83D82195A3CB002AE8E6 /* PatternModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -363,6 +372,9 @@
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
+				AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */,
+				AADC83D92195A3CB002AE8E6 /* PatternModel.swift in Sources */,
+				AADC83D72195A33F002AE8E6 /* MeasuresModel.swift in Sources */,
 				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
 				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
 				AAC911EB219453BC007BE3B4 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
@@ -551,6 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NH4DN74Q28;
 				INFOPLIST_FILE = Studify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -569,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NH4DN74Q28;
 				INFOPLIST_FILE = Studify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
