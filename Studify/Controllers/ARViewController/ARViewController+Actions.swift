@@ -53,7 +53,7 @@ extension ARViewController{
     }
     
     @IBAction func timerTouched(_ sender: UIButton) {
-        
+        model.checkTimes.append(DispatchTime.now())
     }
     
     func updateFocusSquare(){

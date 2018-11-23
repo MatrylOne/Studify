@@ -19,7 +19,7 @@ class ARViewController: UIViewController{
     var object:VirtualObject?
     
     let focusSquare = FocusSquare()
-    let model = MeasuresModel(pattern: PatternModel("T = 2 * PI * sqrt(l/g)"))
+    let model = MeasuresModel(pattern: Settings.PatternModels.pendulum)
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -74,8 +74,11 @@ class ARViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toMeasure"{
-            
+        if segue.identifier == "toMeasures"{
+            guard let navigation = segue.destination as? UINavigationController,
+                let controller = navigation.topViewController as? MeasuresViewController
+                else { return }
+            controller.model = self.model
         }
     }
 }

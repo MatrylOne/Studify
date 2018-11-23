@@ -8,12 +8,15 @@
 
 import Foundation
 
-class PatternModel{
+class Pattern{
     let pattern:String
-    var descriptors: [String:String] = [:]
+    var descriptors: [String] = []
+    var constraints: [String] = []
     
-    init(_ pattern:String){
+    init(_ pattern:String, descriptors:[String], constraints: [String]){
         self.pattern = pattern
+        self.descriptors = descriptors
+        self.constraints = constraints
     }
     
 }

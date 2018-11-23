@@ -17,9 +17,6 @@
 		AABAADB121946BC400ADBC3D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABAADB021946BC400ADBC3D /* Settings.swift */; };
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1966721942382001E4A70 /* PendulumNode.swift */; };
-		AAC911EA219453BC007BE3B4 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
-		AAC911EB219453BC007BE3B4 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */; };
-		AAC911EC219453BC007BE3B4 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */; };
 		AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
 		AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
 		AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
@@ -29,9 +26,12 @@
 		AAD416E5216673BD00006A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */; };
 		AAD416F0216673BD00006A3F /* StudifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416EF216673BD00006A3F /* StudifyTests.swift */; };
 		AAD416FB216673BD00006A3F /* StudifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416FA216673BD00006A3F /* StudifyUITests.swift */; };
+		AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
+		AAD894DE21A855ED00FA1A60 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */; };
+		AAD894DF21A855ED00FA1A60 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */; };
 		AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */; };
 		AADC83D72195A33F002AE8E6 /* MeasuresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D62195A33F002AE8E6 /* MeasuresModel.swift */; };
-		AADC83D92195A3CB002AE8E6 /* PatternModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D82195A3CB002AE8E6 /* PatternModel.swift */; };
+		AADC83D92195A3CB002AE8E6 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D82195A3CB002AE8E6 /* Pattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,7 @@
 		AAD416FC216673BD00006A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresViewController.swift; sourceTree = "<group>"; };
 		AADC83D62195A33F002AE8E6 /* MeasuresModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresModel.swift; sourceTree = "<group>"; };
-		AADC83D82195A3CB002AE8E6 /* PatternModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternModel.swift; sourceTree = "<group>"; };
+		AADC83D82195A3CB002AE8E6 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,18 +129,16 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		AA4BFE6C2170C815004FC4BD /* ViewControllers */ = {
+		AA4BFE6C2170C815004FC4BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA6D54CC2174D47200730309 /* ARViewController.swift */,
-				AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */,
-				AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */,
+				AAD894DC21A855AB00FA1A60 /* ARViewController */,
 				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
 				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
 				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
 				AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AA4BFE732170C9A5004FC4BD /* Views */ = {
@@ -153,14 +151,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AA6D54D02174E45200730309 /* Data */ = {
+		AA6D54D02174E45200730309 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AA6D54D12174E46A00730309 /* Lesson.swift */,
 				AADC83D62195A33F002AE8E6 /* MeasuresModel.swift */,
-				AADC83D82195A3CB002AE8E6 /* PatternModel.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AAC196632193617D001E4A70 /* Sounds */ = {
@@ -208,8 +204,9 @@
 				AAD416DE216673BD00006A3F /* Main.storyboard */,
 				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
 				AA4BFE732170C9A5004FC4BD /* Views */,
-				AA4BFE6C2170C815004FC4BD /* ViewControllers */,
-				AA6D54D02174E45200730309 /* Data */,
+				AA6D54D02174E45200730309 /* Model */,
+				AA4BFE6C2170C815004FC4BD /* Controllers */,
+				AAD894E021A867B300FA1A60 /* Structures */,
 				AA0F03A62189DCE9004C3552 /* Virtual Objects */,
 				AAC196662194228E001E4A70 /* Assets */,
 				AA1CEAF5217F841B002BCAC5 /* Utilities */,
@@ -233,6 +230,25 @@
 				AAD416FC216673BD00006A3F /* Info.plist */,
 			);
 			path = StudifyUITests;
+			sourceTree = "<group>";
+		};
+		AAD894DC21A855AB00FA1A60 /* ARViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA6D54CC2174D47200730309 /* ARViewController.swift */,
+				AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */,
+				AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */,
+			);
+			path = ARViewController;
+			sourceTree = "<group>";
+		};
+		AAD894E021A867B300FA1A60 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				AA6D54D12174E46A00730309 /* Lesson.swift */,
+				AADC83D82195A3CB002AE8E6 /* Pattern.swift */,
+			);
+			path = Structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,20 +388,20 @@
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
+				AAD894DF21A855ED00FA1A60 /* ARViewController+Actions.swift in Sources */,
+				AAD894DE21A855ED00FA1A60 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */,
-				AADC83D92195A3CB002AE8E6 /* PatternModel.swift in Sources */,
+				AADC83D92195A3CB002AE8E6 /* Pattern.swift in Sources */,
 				AADC83D72195A33F002AE8E6 /* MeasuresModel.swift in Sources */,
 				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
 				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
-				AAC911EB219453BC007BE3B4 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
 				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
 				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,
+				AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */,
 				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
-				AAC911EA219453BC007BE3B4 /* ARViewController.swift in Sources */,
 				AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */,
 				AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */,
-				AAC911EC219453BC007BE3B4 /* ARViewController+Actions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

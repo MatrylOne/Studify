@@ -9,10 +9,10 @@
 import Foundation
 
 class MeasuresModel{
-    var checkTimes: [Int] = []
-    let pattern: PatternModel
+    var checkTimes: [DispatchTime] = []
+    let pattern: Pattern
     
-    init(pattern: PatternModel){
+    init(pattern: Pattern){
         self.pattern = pattern
     }
 }
