@@ -25,12 +25,17 @@ extension ARViewController{
                     let maxHeight = Settings.Pendulum.maxHeight
                     
                     let random = CGFloat(arc4random_uniform(maxHeight - minHeight) + minHeight)/100
+                    
                     let pendulum = PendulumNode(length: random)
                     let object = VirtualObject(withNode: pendulum)
                     object.move(to: position, animated: false)
                     object.anchor = self.focusSquare.anchor
                     self.object = object
                     self.sceneView.scene.rootNode.addChildNode(object)
+                    
+                    self.model.realLength = Double(random)
+                    self.model.realTime = Double(pendulum.calculateTime(length: random))
+                    
                     pendulum.animate()
                 }
             }else{

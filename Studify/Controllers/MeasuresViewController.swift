@@ -12,14 +12,21 @@ import UIKit
 class MeasuresViewController: UITableViewController{
     var model:MeasuresModel?
     
-    let sections = ["Wzór", "Opis", "Dane", "Pomiary"]
+    let sections = ["Wzór", "Opis", "Dane", "Pomiary", "Uśredniony pomiar"]
     
     override func viewDidLoad() {
         tableView.allowsSelection = false
+        if let model = self.model {
+            print("Prawdzowy czas to \(model.realTime)")
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        if model!.checkTimes.count > 0{
+            return sections.count
+        }else{
+            return 3
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -35,28 +42,33 @@ class MeasuresViewController: UITableViewController{
         case 2:
             return model?.pattern.constraints.count ?? 0
         case 3:
-            return model?.checkTimes.count ?? 0
+            return model?.betweenTimes().count ?? 0
+        case 4:
+            return 1
         default:
             return 0
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell"),
+            let model = self.model else {
             return UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
         
         switch indexPath.section{
         case 0:
-            cell.textLabel?.text = model?.pattern.pattern
+            cell.textLabel?.text = model.pattern.pattern
         case 1:
-            cell.textLabel?.text = model?.pattern.descriptors[indexPath.row]
+            cell.textLabel?.text = model.pattern.descriptors[indexPath.row]
         case 2:
-            cell.textLabel?.text = model?.pattern.constraints[indexPath.row]
+            cell.textLabel?.text = model.pattern.constraints[indexPath.row]
         case 3:
-            cell.textLabel?.text = "\(model!.checkTimes[indexPath.row].uptimeNanoseconds)"
+            cell.textLabel?.text = "\(model.betweenTimes()[indexPath.row])"
+        case 4:
+            cell.textLabel?.text = "\(round(model.averageTime() * 100)/100)"
         default:
-            cell.textLabel?.text = "TRALALA"
+            cell.textLabel?.text = ""
         }
         
         return cell

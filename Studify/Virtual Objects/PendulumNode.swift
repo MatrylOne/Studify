@@ -140,7 +140,7 @@ class PendulumNode: SCNNode {
         return action
     }
     
-    private func calculateTime(length: CGFloat) -> CGFloat{
+    public func calculateTime(length: CGFloat) -> CGFloat{
         return 2 * CGFloat.pi * sqrt(length/9.8)
     }
 }

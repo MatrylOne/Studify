@@ -66,3 +66,9 @@ extension SCNVector3 {
 func - (l: SCNVector3, r: SCNVector3) -> SCNVector3 {
     return SCNVector3Make(l.x - r.x, l.y - r.y, l.z - r.z)
 }
+
+extension Double {
+    func format(f: String) -> String {
+        return String(format: "%\(f)f", self)
+    }
+}
