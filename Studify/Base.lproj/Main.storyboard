@@ -291,7 +291,7 @@
                     <navigationItem key="navigationItem" title="Pomiary" id="QGi-Be-Q3e">
                         <barButtonItem key="rightBarButtonItem" title="Obliczenia" id="210-5e-7sv">
                             <connections>
-                                <segue destination="ugh-6c-2do" kind="show" id="R9h-lU-1L3"/>
+                                <segue destination="ugh-6c-2do" kind="show" identifier="toExam" id="R9h-lU-1L3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -300,20 +300,64 @@
             </objects>
             <point key="canvasLocation" x="895" y="-1563"/>
         </scene>
-        <!--View Controller-->
+        <!--Obliczenia-->
         <scene sceneID="jTY-EK-AmO">
             <objects>
-                <viewController id="ugh-6c-2do" sceneMemberID="viewController">
+                <viewController title="Obliczenia" id="ugh-6c-2do" customClass="ExamViewController" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CxG-n5-JVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wpisz obliczoną długość wahadła" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9E-9y-bu1">
+                                <rect key="frame" x="16" y="160" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="edc-h7-BVT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wpisz długość wahadła" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QDf-TP-PY7">
+                                <rect key="frame" x="16" y="189" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jkf-lP-gwJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-wr-vzl">
+                                <rect key="frame" x="153" y="227" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5C1-VO-LlL"/>
+                                    <constraint firstAttribute="width" constant="69" id="Iqx-BY-bGK"/>
+                                </constraints>
+                                <state key="normal" title="Zatwierdź"/>
+                                <connections>
+                                    <action selector="acceptTouched:" destination="ugh-6c-2do" eventType="touchUpInside" id="v3j-jb-eoR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B9E-9y-bu1" firstAttribute="leading" secondItem="fMa-9X-1lX" secondAttribute="leading" constant="16" id="2Lj-mZ-PR5"/>
+                            <constraint firstItem="eLb-wr-vzl" firstAttribute="centerX" secondItem="CxG-n5-JVJ" secondAttribute="centerX" id="RSd-Rs-i0e"/>
+                            <constraint firstItem="eLb-wr-vzl" firstAttribute="top" secondItem="QDf-TP-PY7" secondAttribute="bottom" constant="8" id="VZr-9e-jsc"/>
+                            <constraint firstItem="fMa-9X-1lX" firstAttribute="trailing" secondItem="B9E-9y-bu1" secondAttribute="trailing" constant="16" id="Y9w-1l-U0D"/>
+                            <constraint firstItem="QDf-TP-PY7" firstAttribute="leading" secondItem="fMa-9X-1lX" secondAttribute="leading" constant="16" id="Yjr-gy-ANT"/>
+                            <constraint firstItem="B9E-9y-bu1" firstAttribute="top" secondItem="fMa-9X-1lX" secondAttribute="top" constant="20" id="dFe-GC-IMK"/>
+                            <constraint firstItem="fMa-9X-1lX" firstAttribute="trailing" secondItem="QDf-TP-PY7" secondAttribute="trailing" constant="16" id="h62-se-Whk"/>
+                            <constraint firstItem="QDf-TP-PY7" firstAttribute="top" secondItem="B9E-9y-bu1" secondAttribute="bottom" constant="8" id="sny-W0-5WI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fMa-9X-1lX"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="QDf-TP-PY7" id="yqc-A3-uRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vv-Qv-2Xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1652" y="-1564"/>
+            <point key="canvasLocation" x="1652" y="-1564.2857142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X9c-ur-D15">
