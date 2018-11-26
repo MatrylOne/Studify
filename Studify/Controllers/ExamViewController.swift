@@ -22,8 +22,7 @@ class ExamViewController: UIViewController {
     
     @IBAction func acceptTouched(_ sender: UIButton) {
         print("Dobra długość : \(model!.realLength), twoja długość \(textField.text)")
-        show(LessonsViewController(), sender: nil)
-    }
+        }
     
 
     /*

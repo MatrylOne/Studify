@@ -9,10 +9,13 @@
 import UIKit
 
 class LessonDetailViewController: UIViewController {
-    
-    var model:Lesson?
+    // MARK: - IBOutlets
     @IBOutlet weak var runButton: BigCoverButton!
     
+    // MARK: - Class properties
+    var model:Lesson?
+    
+    // MARK: - Class methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,9 +24,4 @@ class LessonDetailViewController: UIViewController {
             runButton.setImage(UIImage(named: model.image), for: .normal)
         }
     }
-    
-    @IBAction func runAR(_ sender: Any) {
-        performSegue(withIdentifier: "ARSegue", sender: self)
-    }
-    
 }

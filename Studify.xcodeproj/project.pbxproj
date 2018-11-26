@@ -14,6 +14,7 @@
 		AA6D54D22174E46A00730309 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D12174E46A00730309 /* Lesson.swift */; };
 		AA6D54D421761FE400730309 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D321761FE400730309 /* BlurButton.swift */; };
 		AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D5217626C700730309 /* BigCoverButton.swift */; };
+		AA7F6BCD21AC2CD800EFE9CE /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */; };
 		AABAADB121946BC400ADBC3D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABAADB021946BC400ADBC3D /* Settings.swift */; };
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1966721942382001E4A70 /* PendulumNode.swift */; };
@@ -66,6 +67,7 @@
 		AA6D54D12174E46A00730309 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		AA6D54D321761FE400730309 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
 		AA6D54D5217626C700730309 /* BigCoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCoverButton.swift; sourceTree = "<group>"; };
+		AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
 		AABAADB021946BC400ADBC3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AAC196642193618C001E4A70 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		AAC1966721942382001E4A70 /* PendulumNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumNode.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
 				AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */,
 				AAD894E121A87EA000FA1A60 /* ExamViewController.swift */,
+				AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
+				AA7F6BCD21AC2CD800EFE9CE /* GradeViewController.swift in Sources */,
 				AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */,
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
