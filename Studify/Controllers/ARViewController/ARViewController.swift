@@ -19,7 +19,7 @@ class ARViewController: UIViewController{
     var object:VirtualObject?
     
     let focusSquare = FocusSquare()
-    let model = MeasuresModel(pattern: Settings.PatternModels.pendulum)
+    var model:ExperimentModel?
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

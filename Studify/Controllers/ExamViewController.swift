@@ -11,7 +11,7 @@ import UIKit
 class ExamViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
-    var model:MeasuresModel?
+    var model:ExperimentModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ExamViewController: UIViewController {
     
     
     @IBAction func acceptTouched(_ sender: UIButton) {
-        print("Dobra długość : \(model!.realLength), twoja długość \(textField.text)")
+        print("Dobra długość : \(model!.pendulumModel.length), twoja długość \(textField.text)")
         }
     
 

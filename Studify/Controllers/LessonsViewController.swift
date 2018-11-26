@@ -15,10 +15,11 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     private let lessons = [Lesson(name: "Ruch harmoniczny",
                                   description: "Lekcja o ruchu harmonicznym",
                                   instruction: "Rusz wahadłem",
-                                  image:"gravity")]
+                                  image:"gravity",
+                                  pattern:Settings.PatternModels.pendulum)]
     
     // MARK: - Class properties
-    var selectedModel = 0
+    var selectedLessonId = 0
 
     // MARK: - Class main methods
     override func viewDidLoad() {
@@ -30,7 +31,8 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     // MARK: - Navigation methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as? LessonDetailViewController
-        controller?.model = lessons[selectedModel]
+        controller?.model = ExperimentModel(lesson: lessons[selectedLessonId])
+        controller?.model?.pendulumModel = PendulumModel()
     }
     
     @IBAction func unwindToMain(_ sender:UIStoryboardSegue){}
@@ -53,7 +55,7 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedModel = indexPath.row
+        selectedLessonId = indexPath.row
         performSegue(withIdentifier: "Detail", sender: self)
     }
     

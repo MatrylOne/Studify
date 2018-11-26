@@ -10,19 +10,19 @@ import Foundation
 import UIKit
 
 class MeasuresViewController: UITableViewController{
-    var model:MeasuresModel?
+    var model:ExperimentModel?
     
     let sections = ["Wzór", "Opis", "Dane", "Pomiary", "Uśredniony pomiar"]
     
     override func viewDidLoad() {
         tableView.allowsSelection = false
         if let model = self.model {
-            print("Prawdzowy czas to \(model.realTime)")
+            print("Prawdzowy czas to \(model.pendulumModel.time)")
         }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if model!.checkTimes.count > 0{
+        if model!.stopWatch.count > 0{
             return sections.count
         }else{
             return 3
@@ -38,11 +38,11 @@ class MeasuresViewController: UITableViewController{
         case 0:
             return 1
         case 1:
-            return model?.pattern.descriptors.count ?? 0
+            return model?.lesson.pattern.descriptors.count ?? 0
         case 2:
-            return model?.pattern.constraints.count ?? 0
+            return model?.lesson.pattern.constraints.count ?? 0
         case 3:
-            return model?.betweenTimes().count ?? 0
+            return model?.stopWatch.count ?? 0
         case 4:
             return 1
         default:
@@ -58,15 +58,15 @@ class MeasuresViewController: UITableViewController{
         
         switch indexPath.section{
         case 0:
-            cell.textLabel?.text = model.pattern.pattern
+            cell.textLabel?.text = model.lesson.pattern.pattern
         case 1:
-            cell.textLabel?.text = model.pattern.descriptors[indexPath.row]
+            cell.textLabel?.text = model.lesson.pattern.descriptors[indexPath.row]
         case 2:
-            cell.textLabel?.text = model.pattern.constraints[indexPath.row]
+            cell.textLabel?.text = model.lesson.pattern.constraints[indexPath.row]
         case 3:
-            cell.textLabel?.text = "\(model.betweenTimes()[indexPath.row])"
+            cell.textLabel?.text = "\(model.stopWatch.betweenTimes[indexPath.row])"
         case 4:
-            cell.textLabel?.text = "\(round(model.averageTime() * 100)/100)"
+            cell.textLabel?.text = "\(round(model.stopWatch.averageTime * 100)/100)"
         default:
             cell.textLabel?.text = ""
         }

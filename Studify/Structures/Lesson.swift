@@ -14,4 +14,5 @@ struct Lesson{
     let description:String
     let instruction:String
     let image:String
+    let pattern:Pattern
 }

@@ -21,21 +21,14 @@ extension ARViewController{
             
             if object == nil{
                 DispatchQueue.main.async {
-                    let minHeight = Settings.Pendulum.minHeight
-                    let maxHeight = Settings.Pendulum.maxHeight
                     
-                    let random = CGFloat(arc4random_uniform(maxHeight - minHeight) + minHeight)/100
                     
-                    let pendulum = PendulumNode(length: random)
+                    let pendulum = PendulumNode(model: self.model!.pendulumModel)
                     let object = VirtualObject(withNode: pendulum)
                     object.move(to: position, animated: false)
                     object.anchor = self.focusSquare.anchor
                     self.object = object
                     self.sceneView.scene.rootNode.addChildNode(object)
-                    
-                    self.model.realLength = Double(random)
-                    self.model.realTime = Double(pendulum.calculateTime(length: random))
-                    
                     pendulum.animate()
                 }
             }else{
@@ -58,7 +51,7 @@ extension ARViewController{
     }
     
     @IBAction func timerTouched(_ sender: UIButton) {
-        model.checkTimes.append(DispatchTime.now())
+        model!.stopWatch.check()
     }
     
     func updateFocusSquare(){

@@ -11,20 +11,21 @@ import SceneKit
 
 class PendulumNode: SCNNode {
     
-    let length:CGFloat
+    let model:PendulumModel
+    
     var lastRotation:Float = 0
     let tickSound = SCNAction.playAudio(SCNAudioSource(fileNamed: "tick.mp3")!, waitForCompletion: false)
     
-    init(length: CGFloat){
-        self.length = length
+    init(model:PendulumModel){
+        self.model = model
         super.init()
-        addChildNode(build(length: self.length))
+        addChildNode(build(length: CGFloat(model.length)))
     }
     
     override init() {
-        self.length = 0.2
+        model = PendulumModel(length: 0.2)
         super.init()
-        addChildNode(build(length: self.length))
+        addChildNode(build(length: CGFloat(model.length)))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -119,14 +120,13 @@ class PendulumNode: SCNNode {
     }
     
     public func animate(){
+        let angle = Settings.Pendulum.angle
+        
         guard let pendulum = childNode(withName: "pendulum", recursively: false),
             let handle = pendulum.childNode(withName: "handle", recursively: false)
             else { return }
         
-        let time = calculateTime(length: self.length)
-        let angle = Settings.Pendulum.angle
-        
-        handle.runAction(createAnimation(time: time, angle: angle))
+        handle.runAction(createAnimation(time: CGFloat(model.time), angle: angle))
     }
     
     private func createAnimation(time:CGFloat, angle:CGFloat) -> SCNAction{
@@ -138,9 +138,5 @@ class PendulumNode: SCNNode {
         let action = SCNAction.repeatForever(sequence)
         
         return action
-    }
-    
-    public func calculateTime(length: CGFloat) -> CGFloat{
-        return 2 * CGFloat.pi * sqrt(length/9.8)
     }
 }
