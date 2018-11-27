@@ -17,6 +17,8 @@
 		AA7F6BCD21AC2CD800EFE9CE /* GradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */; };
 		AA7F6BCF21AC3B9700EFE9CE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BCE21AC3B9700EFE9CE /* Stopwatch.swift */; };
 		AA7F6BD121AC3FCB00EFE9CE /* PendulumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BD021AC3FCB00EFE9CE /* PendulumModel.swift */; };
+		AA7F6BD321AC4B2500EFE9CE /* PendulumResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BD221AC4B2500EFE9CE /* PendulumResult.swift */; };
+		AA7F6BD621AC4BB500EFE9CE /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BD521AC4BB500EFE9CE /* ExamViewController.swift */; };
 		AABAADB121946BC400ADBC3D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABAADB021946BC400ADBC3D /* Settings.swift */; };
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1966721942382001E4A70 /* PendulumNode.swift */; };
@@ -32,7 +34,6 @@
 		AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CC2174D47200730309 /* ARViewController.swift */; };
 		AAD894DE21A855ED00FA1A60 /* ARViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */; };
 		AAD894DF21A855ED00FA1A60 /* ARViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */; };
-		AAD894E221A87EA000FA1A60 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD894E121A87EA000FA1A60 /* ExamViewController.swift */; };
 		AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */; };
 		AADC83D72195A33F002AE8E6 /* ExperimentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D62195A33F002AE8E6 /* ExperimentModel.swift */; };
 		AADC83D92195A3CB002AE8E6 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADC83D82195A3CB002AE8E6 /* Pattern.swift */; };
@@ -72,6 +73,8 @@
 		AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeViewController.swift; sourceTree = "<group>"; };
 		AA7F6BCE21AC3B9700EFE9CE /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		AA7F6BD021AC3FCB00EFE9CE /* PendulumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumModel.swift; sourceTree = "<group>"; };
+		AA7F6BD221AC4B2500EFE9CE /* PendulumResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumResult.swift; sourceTree = "<group>"; };
+		AA7F6BD521AC4BB500EFE9CE /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
 		AABAADB021946BC400ADBC3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AAC196642193618C001E4A70 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		AAC1966721942382001E4A70 /* PendulumNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumNode.swift; sourceTree = "<group>"; };
@@ -87,7 +90,6 @@
 		AAD416F6216673BD00006A3F /* StudifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416FA216673BD00006A3F /* StudifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudifyUITests.swift; sourceTree = "<group>"; };
 		AAD416FC216673BD00006A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAD894E121A87EA000FA1A60 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
 		AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasuresViewController.swift; sourceTree = "<group>"; };
 		AADC83D62195A33F002AE8E6 /* ExperimentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentModel.swift; sourceTree = "<group>"; };
 		AADC83D82195A3CB002AE8E6 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
@@ -146,8 +148,8 @@
 				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
 				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
 				AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */,
-				AAD894E121A87EA000FA1A60 /* ExamViewController.swift */,
 				AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */,
+				AA7F6BD521AC4BB500EFE9CE /* ExamViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +261,7 @@
 			children = (
 				AA6D54D12174E46A00730309 /* Lesson.swift */,
 				AADC83D82195A3CB002AE8E6 /* Pattern.swift */,
+				AA7F6BD221AC4B2500EFE9CE /* PendulumResult.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -400,17 +403,18 @@
 				AA7F6BD121AC3FCB00EFE9CE /* PendulumModel.swift in Sources */,
 				AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */,
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
+				AA7F6BD621AC4BB500EFE9CE /* ExamViewController.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
 				AAD894DF21A855ED00FA1A60 /* ARViewController+Actions.swift in Sources */,
 				AAD894DE21A855ED00FA1A60 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */,
 				AADC83D92195A3CB002AE8E6 /* Pattern.swift in Sources */,
-				AAD894E221A87EA000FA1A60 /* ExamViewController.swift in Sources */,
 				AADC83D72195A33F002AE8E6 /* ExperimentModel.swift in Sources */,
 				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
 				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
+				AA7F6BD321AC4B2500EFE9CE /* PendulumResult.swift in Sources */,
 				AA7F6BCF21AC3B9700EFE9CE /* Stopwatch.swift in Sources */,
 				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
 				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,

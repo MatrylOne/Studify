@@ -19,12 +19,39 @@ class GradeViewController: UITableViewController {
     @IBOutlet weak var lengthErrorLabel: UILabel!
     @IBOutlet weak var gradeLabel: UILabel!
     
-    // MARK: Model
+    // MARK: - Model
+    var model:ExperimentModel?
     
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
         tableView.allowsSelection = false
+        
+        fillData()
+        
+    }
+    
+    func fillData(){
+        guard let results = model?.pendulumResult,
+            let reality = model?.pendulumModel else { return }
+        
+        let roundedTime:Double = round(reality.time * 1000)/1000
+        let timeError = (roundedTime / abs(roundedTime - results.time)) * 100
+        let roundedTimeError = round(timeError * 1000)/1000
+        
+        let lengthInCm:Double = round(reality.length * 100)
+        let roundedLengthError = round(((lengthInCm) / abs((lengthInCm) - results.length)) * 100 * 1000)/1000
+        
+        realTimeLabel.text = "\(roundedTime)"
+        calculatedTimeLabel.text = "\(results.time)"
+        timeErrorLabel.text = "\(roundedTimeError)"
+        
+        realLengthLabel.text = "\(lengthInCm)"
+        calculatedLengthLabel.text = "\(results.length)"
+        lengthErrorLabel.text = "\(roundedLengthError)"
+        
+        gradeLabel.text = "Will be added in next update"
     }
 }

@@ -15,6 +15,7 @@ class ExperimentModel{
     
     // MARK: - Class properties
     var pendulumModel = PendulumModel()
+    var pendulumResult = PendulumResult()
     var lesson:Lesson
     
     init(lesson:Lesson) {

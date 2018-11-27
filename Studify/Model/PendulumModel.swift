@@ -15,7 +15,7 @@ class PendulumModel{
     
     // MARK: - Computed properties
     lazy var time:Double = {
-        return 2 * Double.pi * sqrt(length)/9.8
+        return 2 * Double.pi * sqrt(length/Settings.Physics.gVelocity)
     }()
     
     // MARK: - Methods

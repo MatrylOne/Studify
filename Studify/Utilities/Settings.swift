@@ -35,6 +35,9 @@ public class Settings{
                                            
                                            constraints: ["PI - 3.14",
                                                          "g - 9.89"])
-        
+    }
+    
+    public class Physics{
+        static let gVelocity = 9.8
     }
 }

@@ -75,7 +75,7 @@ class MeasuresViewController: UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toExam", let controller = segue.destination as? ExamViewController{
+        if segue.identifier == "toResults", let controller = segue.destination as? ExamViewController{
             controller.model = self.model
         }
     }
