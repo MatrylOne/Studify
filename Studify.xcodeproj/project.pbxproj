@@ -25,6 +25,7 @@
 		AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
 		AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
 		AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
+		AACB4D5D21AE082F00DF491D /* Studify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D5B21AE082F00DF491D /* Studify.xcdatamodeld */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416E0216673BD00006A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DE216673BD00006A3F /* Main.storyboard */; };
 		AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E1216673BD00006A3F /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		AABAADB021946BC400ADBC3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AAC196642193618C001E4A70 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		AAC1966721942382001E4A70 /* PendulumNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumNode.swift; sourceTree = "<group>"; };
+		AACB4D5C21AE082F00DF491D /* Studify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Studify.xcdatamodel; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DF216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				AA1CEAF6217F8433002BCAC5 /* Utilities.swift */,
-				AABAADB021946BC400ADBC3D /* Settings.swift */,
 				AA7F6BCE21AC3B9700EFE9CE /* Stopwatch.swift */,
 			);
 			path = Utilities;
@@ -157,6 +158,8 @@
 		AA4BFE732170C9A5004FC4BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AAD416DE216673BD00006A3F /* Main.storyboard */,
+				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
 				AA6D54D321761FE400730309 /* BlurButton.swift */,
 				AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */,
 				AA6D54D5217626C700730309 /* BigCoverButton.swift */,
@@ -164,13 +167,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AA6D54D02174E45200730309 /* Model */ = {
+		AA6D54D02174E45200730309 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				AADC83D62195A33F002AE8E6 /* ExperimentModel.swift */,
 				AA7F6BD021AC3FCB00EFE9CE /* PendulumModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AAC196632193617D001E4A70 /* Sounds */ = {
@@ -188,6 +191,15 @@
 				AAC196632193617D001E4A70 /* Sounds */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		AACB4D5A21AE03F200DF491D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AABAADB021946BC400ADBC3D /* Settings.swift */,
+				AACB4D5B21AE082F00DF491D /* Studify.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		AAD416CC216673BC00006A3F = {
@@ -215,15 +227,14 @@
 			children = (
 				AAD416E6216673BD00006A3F /* Info.plist */,
 				AAD416D8216673BD00006A3F /* AppDelegate.swift */,
-				AAD416DE216673BD00006A3F /* Main.storyboard */,
-				AAD416E3216673BD00006A3F /* LaunchScreen.storyboard */,
+				AA6D54D02174E45200730309 /* Models */,
 				AA4BFE732170C9A5004FC4BD /* Views */,
-				AA6D54D02174E45200730309 /* Model */,
 				AA4BFE6C2170C815004FC4BD /* Controllers */,
-				AAD894E021A867B300FA1A60 /* Structures */,
+				AAD894E021A867B300FA1A60 /* Data Structures */,
+				AACB4D5A21AE03F200DF491D /* Data */,
+				AA1CEAF5217F841B002BCAC5 /* Utilities */,
 				AA0F03A62189DCE9004C3552 /* Virtual Objects */,
 				AAC196662194228E001E4A70 /* Assets */,
-				AA1CEAF5217F841B002BCAC5 /* Utilities */,
 			);
 			path = Studify;
 			sourceTree = "<group>";
@@ -256,14 +267,14 @@
 			path = ARViewController;
 			sourceTree = "<group>";
 		};
-		AAD894E021A867B300FA1A60 /* Structures */ = {
+		AAD894E021A867B300FA1A60 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
 				AA6D54D12174E46A00730309 /* Lesson.swift */,
 				AADC83D82195A3CB002AE8E6 /* Pattern.swift */,
 				AA7F6BD221AC4B2500EFE9CE /* PendulumResult.swift */,
 			);
-			path = Structures;
+			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AACB4D5D21AE082F00DF491D /* Studify.xcdatamodeld in Sources */,
 				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
 				AA7F6BCD21AC2CD800EFE9CE /* GradeViewController.swift in Sources */,
 				AA7F6BD121AC3FCB00EFE9CE /* PendulumModel.swift in Sources */,
@@ -752,6 +764,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AACB4D5B21AE082F00DF491D /* Studify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AACB4D5C21AE082F00DF491D /* Studify.xcdatamodel */,
+			);
+			currentVersion = AACB4D5C21AE082F00DF491D /* Studify.xcdatamodel */;
+			path = Studify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AAD416CD216673BC00006A3F /* Project object */;
 }

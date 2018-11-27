@@ -39,6 +39,7 @@ class ARViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+        object = nil
     }
     
     func setupAR(){
