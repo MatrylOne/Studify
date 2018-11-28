@@ -25,7 +25,11 @@
 		AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
 		AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
 		AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
-		AACB4D5D21AE082F00DF491D /* Studify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D5B21AE082F00DF491D /* Studify.xcdatamodeld */; };
+		AACB4D5F21AEA68700DF491D /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D5E21AEA68700DF491D /* DataStorage.swift */; };
+		AACB4D6121AEAF4400DF491D /* GradeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6021AEAF4400DF491D /* GradeListViewController.swift */; };
+		AACB4D6321AEAF6600DF491D /* GradeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6221AEAF6600DF491D /* GradeDetailViewController.swift */; };
+		AACB4D6521AEAFA100DF491D /* GradesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6421AEAFA100DF491D /* GradesModel.swift */; };
+		AACB4D6B21AEBEF000DF491D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6921AEBEF000DF491D /* Database.xcdatamodeld */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416E0216673BD00006A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DE216673BD00006A3F /* Main.storyboard */; };
 		AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E1216673BD00006A3F /* Assets.xcassets */; };
@@ -79,7 +83,11 @@
 		AABAADB021946BC400ADBC3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		AAC196642193618C001E4A70 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		AAC1966721942382001E4A70 /* PendulumNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumNode.swift; sourceTree = "<group>"; };
-		AACB4D5C21AE082F00DF491D /* Studify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Studify.xcdatamodel; sourceTree = "<group>"; };
+		AACB4D5E21AEA68700DF491D /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		AACB4D6021AEAF4400DF491D /* GradeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeListViewController.swift; sourceTree = "<group>"; };
+		AACB4D6221AEAF6600DF491D /* GradeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailViewController.swift; sourceTree = "<group>"; };
+		AACB4D6421AEAFA100DF491D /* GradesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesModel.swift; sourceTree = "<group>"; };
+		AACB4D6A21AEBEF000DF491D /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DF216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +159,8 @@
 				AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */,
 				AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */,
 				AA7F6BD521AC4BB500EFE9CE /* ExamViewController.swift */,
+				AACB4D6021AEAF4400DF491D /* GradeListViewController.swift */,
+				AACB4D6221AEAF6600DF491D /* GradeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +182,7 @@
 			children = (
 				AADC83D62195A33F002AE8E6 /* ExperimentModel.swift */,
 				AA7F6BD021AC3FCB00EFE9CE /* PendulumModel.swift */,
+				AACB4D6421AEAFA100DF491D /* GradesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,13 +204,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		AACB4D5A21AE03F200DF491D /* Data */ = {
+		AACB4D5A21AE03F200DF491D /* Data Storage */ = {
 			isa = PBXGroup;
 			children = (
 				AABAADB021946BC400ADBC3D /* Settings.swift */,
-				AACB4D5B21AE082F00DF491D /* Studify.xcdatamodeld */,
+				AACB4D5E21AEA68700DF491D /* DataStorage.swift */,
+				AACB4D6921AEBEF000DF491D /* Database.xcdatamodeld */,
 			);
-			path = Data;
+			path = "Data Storage";
 			sourceTree = "<group>";
 		};
 		AAD416CC216673BC00006A3F = {
@@ -231,7 +243,7 @@
 				AA4BFE732170C9A5004FC4BD /* Views */,
 				AA4BFE6C2170C815004FC4BD /* Controllers */,
 				AAD894E021A867B300FA1A60 /* Data Structures */,
-				AACB4D5A21AE03F200DF491D /* Data */,
+				AACB4D5A21AE03F200DF491D /* Data Storage */,
 				AA1CEAF5217F841B002BCAC5 /* Utilities */,
 				AA0F03A62189DCE9004C3552 /* Virtual Objects */,
 				AAC196662194228E001E4A70 /* Assets */,
@@ -409,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AACB4D5D21AE082F00DF491D /* Studify.xcdatamodeld in Sources */,
 				AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */,
 				AA7F6BCD21AC2CD800EFE9CE /* GradeViewController.swift in Sources */,
 				AA7F6BD121AC3FCB00EFE9CE /* PendulumModel.swift in Sources */,
@@ -418,6 +429,8 @@
 				AA7F6BD621AC4BB500EFE9CE /* ExamViewController.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
+				AACB4D5F21AEA68700DF491D /* DataStorage.swift in Sources */,
+				AACB4D6121AEAF4400DF491D /* GradeListViewController.swift in Sources */,
 				AAD894DF21A855ED00FA1A60 /* ARViewController+Actions.swift in Sources */,
 				AAD894DE21A855ED00FA1A60 /* ARViewController+ARSCNViewDelegate.swift in Sources */,
 				AADC83D521959BFC002AE8E6 /* MeasuresViewController.swift in Sources */,
@@ -425,15 +438,18 @@
 				AADC83D72195A33F002AE8E6 /* ExperimentModel.swift in Sources */,
 				AA6D54D421761FE400730309 /* BlurButton.swift in Sources */,
 				AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */,
+				AACB4D6521AEAFA100DF491D /* GradesModel.swift in Sources */,
 				AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */,
 				AA7F6BD321AC4B2500EFE9CE /* PendulumResult.swift in Sources */,
 				AA7F6BCF21AC3B9700EFE9CE /* Stopwatch.swift in Sources */,
 				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
+				AACB4D6B21AEBEF000DF491D /* Database.xcdatamodeld in Sources */,
 				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,
 				AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */,
 				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
 				AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */,
 				AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */,
+				AACB4D6321AEAF6600DF491D /* GradeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,13 +782,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AACB4D5B21AE082F00DF491D /* Studify.xcdatamodeld */ = {
+		AACB4D6921AEBEF000DF491D /* Database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				AACB4D5C21AE082F00DF491D /* Studify.xcdatamodel */,
+				AACB4D6A21AEBEF000DF491D /* Database.xcdatamodel */,
 			);
-			currentVersion = AACB4D5C21AE082F00DF491D /* Studify.xcdatamodel */;
-			path = Studify.xcdatamodeld;
+			currentVersion = AACB4D6A21AEBEF000DF491D /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

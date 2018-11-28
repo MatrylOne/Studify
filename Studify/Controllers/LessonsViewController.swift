@@ -12,11 +12,6 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     
     // MARK: - Consts
     private let reuseIdentifier = "cell"
-    private let lessons = [Lesson(name: "Ruch harmoniczny",
-                                  description: "Lekcja o ruchu harmonicznym",
-                                  instruction: "Rusz wahadłem",
-                                  image:"gravity",
-                                  pattern:Settings.PatternModels.pendulum)]
     
     // MARK: - Class properties
     var selectedLessonId = 0
@@ -31,7 +26,7 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     // MARK: - Navigation methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as? LessonDetailViewController
-        controller?.model = ExperimentModel(lesson: lessons[selectedLessonId])
+        controller?.model = ExperimentModel(lesson: DataStorage.LessonsData.lessons[selectedLessonId])
         controller?.model?.pendulumModel = PendulumModel()
     }
     
@@ -46,7 +41,7 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LessonsViewCell
         
-        let lesson = lessons[indexPath.row]
+        let lesson = DataStorage.LessonsData.lessons[indexPath.row]
         cell.label.text = lesson.name
         cell.image.image = UIImage(named: lesson.image)
         cell.layer.cornerRadius = 10
@@ -66,7 +61,7 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return lessons.count
+        return DataStorage.LessonsData.lessons.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

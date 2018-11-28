@@ -17,6 +17,7 @@ class ExamViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.allowsSelection = false
     }
     
     @IBAction func approveTouched(_ sender: UIButton) {

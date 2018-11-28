@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 class ExperimentModel{
     
     // MARK: - Connected objects
     let stopWatch = Stopwatch()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     // MARK: - Class properties
     var pendulumModel = PendulumModel()

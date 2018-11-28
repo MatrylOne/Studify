@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct Lesson{
+    let id:Int
     let name:String
     let description:String
     let instruction:String

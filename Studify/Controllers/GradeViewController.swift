@@ -30,6 +30,7 @@ class GradeViewController: UITableViewController {
         tableView.allowsSelection = false
         
         fillData()
+        print(model!.lesson.id)
         
     }
     
