@@ -31,9 +31,9 @@ class GradeViewController: UITableViewController {
         
         fillData()
         if let model = model{
-            let grade = Grade(grade: 5,
-                              realValue: Int(round(model.pendulumModel.length)),
-                              userValue: Int(round(model.pendulumResult.length)),
+            _ = Grade(grade: 5,
+                              realValue: Int(round(model.pendulumModel.length * 100)),
+                              userValue: Int(round(model.pendulumResult.length * 100)),
                               date: Date(),
                               context: model.context)
             do{

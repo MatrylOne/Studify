@@ -17,6 +17,7 @@ class GradeListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -25,12 +26,12 @@ class GradeListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.grades.count
+        return model.grades().count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let grade = model.grades[indexPath.row]
+        let grade = model.grades()[indexPath.row]
         cell.textLabel?.text = "\(grade.date!)"
         cell.detailTextLabel?.text = "\(grade.grade)"
         return cell
@@ -47,7 +48,7 @@ class GradeListViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? GradeDetailViewController{
-            controller.model = model.grades[selectedModel]
+            controller.model = model.grades()[selectedModel]
         }
     }
 }

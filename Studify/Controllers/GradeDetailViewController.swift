@@ -24,5 +24,17 @@ class GradeDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.allowsSelection = false
+        fill()
+    }
+    
+    func fill(){
+        guard let model = model else {return}
+        
+        dateLabel.text = "\(model.date!)"
+        gradeLabel.text = "\(model.grade)"
+        realValueLabel.text = "\(model.realValue)"
+        userValueLabel.text = "\(model.userValue)"
+        // TODO: Zrobić obliczanie błędu
+        errorLabel.text = "Will be added in future update"
     }
 }
