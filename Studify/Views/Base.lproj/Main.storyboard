@@ -517,7 +517,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Długość" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-J6-m3t">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Długość" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-J6-m3t">
                                                     <rect key="frame" x="16" y="7" width="343" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -526,7 +526,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="PMp-J6-m3t" firstAttribute="leading" secondItem="c7p-Be-YMS" secondAttribute="leadingMargin" id="2Ac-6I-jzy"/>
+                                                <constraint firstItem="PMp-J6-m3t" firstAttribute="centerY" secondItem="c7p-Be-YMS" secondAttribute="centerY" id="5Mx-xC-ito"/>
                                                 <constraint firstItem="PMp-J6-m3t" firstAttribute="trailing" secondItem="c7p-Be-YMS" secondAttribute="trailingMargin" id="ZcV-WI-J6j"/>
+                                                <constraint firstItem="PMp-J6-m3t" firstAttribute="centerX" secondItem="c7p-Be-YMS" secondAttribute="centerX" id="i9Q-mS-Ocz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
