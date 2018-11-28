@@ -30,6 +30,18 @@ class GradeViewController: UITableViewController {
         tableView.allowsSelection = false
         
         fillData()
+        if let model = model{
+            let grade = Grade(grade: 5,
+                              realValue: Int(round(model.pendulumModel.length)),
+                              userValue: Int(round(model.pendulumResult.length)),
+                              date: Date(),
+                              context: model.context)
+            do{
+                try model.context.save()
+            }catch {
+                print(error)
+            }
+        }
         print(model!.lesson.id)
         
     }

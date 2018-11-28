@@ -13,4 +13,15 @@ import CoreData
 class GradesModel{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let lessons = DataStorage.LessonsData.lessons
+    lazy var grades:[Grade] = {
+        let gradesRequest = NSFetchRequest<Grade>(entityName: "Grade")
+        do{
+            if let results = try context.fetch(gradesRequest) as? [Grade]{
+                return results
+            }
+        }catch{
+            print(error)
+        }
+        return []
+    }()
 }

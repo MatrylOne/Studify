@@ -30,6 +30,7 @@
 		AACB4D6321AEAF6600DF491D /* GradeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6221AEAF6600DF491D /* GradeDetailViewController.swift */; };
 		AACB4D6521AEAFA100DF491D /* GradesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6421AEAFA100DF491D /* GradesModel.swift */; };
 		AACB4D6B21AEBEF000DF491D /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6921AEBEF000DF491D /* Database.xcdatamodeld */; };
+		AACB4D6D21AEC05C00DF491D /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6C21AEC05C00DF491D /* Grade.swift */; };
 		AAD416D9216673BD00006A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD416D8216673BD00006A3F /* AppDelegate.swift */; };
 		AAD416E0216673BD00006A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD416DE216673BD00006A3F /* Main.storyboard */; };
 		AAD416E2216673BD00006A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD416E1216673BD00006A3F /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		AACB4D6221AEAF6600DF491D /* GradeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeDetailViewController.swift; sourceTree = "<group>"; };
 		AACB4D6421AEAFA100DF491D /* GradesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradesModel.swift; sourceTree = "<group>"; };
 		AACB4D6A21AEBEF000DF491D /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		AACB4D6C21AEC05C00DF491D /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		AAD416D5216673BD00006A3F /* Studify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD416D8216673BD00006A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD416DF216673BD00006A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				AABAADB021946BC400ADBC3D /* Settings.swift */,
 				AACB4D5E21AEA68700DF491D /* DataStorage.swift */,
 				AACB4D6921AEBEF000DF491D /* Database.xcdatamodeld */,
+				AACB4D6C21AEC05C00DF491D /* Grade.swift */,
 			);
 			path = "Data Storage";
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				AA7F6BCF21AC3B9700EFE9CE /* Stopwatch.swift in Sources */,
 				AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */,
 				AACB4D6B21AEBEF000DF491D /* Database.xcdatamodeld in Sources */,
+				AACB4D6D21AEC05C00DF491D /* Grade.swift in Sources */,
 				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,
 				AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */,
 				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
