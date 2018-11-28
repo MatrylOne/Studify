@@ -9,6 +9,6 @@
 import Foundation
 
 class PendulumResult{
-    var length:Double = 0
+    var lengthInCm:Int = 0
     var time:Double = 0
 }

@@ -37,18 +37,17 @@ class GradeViewController: UITableViewController {
             let reality = model?.pendulumModel else { return }
         
         let roundedTime:Double = round(reality.time * 1000)/1000
-        let lengthInCm:Double = round(reality.lengthInM * 100)
+        let lengthInCm:Int = reality.lengthInCm
         
         let timeError = 0
         let lengthError = 0
-        
         
         realTimeLabel.text = "\(roundedTime)"
         calculatedTimeLabel.text = "\(results.time)"
         timeErrorLabel.text = "\(timeError)"
         
         realLengthLabel.text = "\(lengthInCm)"
-        calculatedLengthLabel.text = "\(results.length)"
+        calculatedLengthLabel.text = "\(results.lengthInCm)"
         lengthErrorLabel.text = "\(lengthError)"
         
         gradeLabel.text = "Will be added in next update"
@@ -56,8 +55,8 @@ class GradeViewController: UITableViewController {
         
         if let model = model{
             _ = Grade(grade: 5,
-                      realValue: Int(round(model.pendulumModel.lengthInM * 100)),
-                      userValue: Int(round(model.pendulumResult.length * 100)),
+                      realValue: model.pendulumModel.lengthInCm,
+                      userValue: model.pendulumResult.lengthInCm,
                       date: Date(),
                       context: model.context)
             do{

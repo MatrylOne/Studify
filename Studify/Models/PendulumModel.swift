@@ -10,11 +10,11 @@ import Foundation
 
 class PendulumModel{
     // MARK: - Properties
-    let lengthInM:Double
+    let lengthInCm:Int
     
     // MARK: - Computed properties
     lazy var time:Double = {
-        return 2 * Double.pi * sqrt(lengthInM/Settings.Physics.gVelocity)
+        return 2 * Double.pi * sqrt((Double(lengthInCm) / 100)/Settings.Physics.gVelocity)
     }()
     
     // MARK: - Methods
@@ -23,10 +23,10 @@ class PendulumModel{
         let maxHeight = Settings.Pendulum.maxHeight
         
         // Random length
-        lengthInM = Double(arc4random_uniform(maxHeight - minHeight) + minHeight)/100
+        lengthInCm = Int(arc4random_uniform(maxHeight - minHeight) + minHeight)
     }
     
-    init(lengthInM:Double){
-        self.lengthInM = lengthInM
+    init(lengthInCm:Int){
+        self.lengthInCm = lengthInCm
     }
 }

@@ -19,13 +19,7 @@ class PendulumNode: SCNNode {
     init(model:PendulumModel){
         self.model = model
         super.init()
-        addChildNode(build(length: CGFloat(model.lengthInM)))
-    }
-    
-    override init() {
-        model = PendulumModel(lengthInM: 0.2)
-        super.init()
-        addChildNode(build(length: CGFloat(model.lengthInM)))
+        addChildNode(build(length: CGFloat(model.lengthInCm)/100))
     }
     
     required init?(coder aDecoder: NSCoder) {

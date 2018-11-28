@@ -29,8 +29,9 @@ class GradeDetailViewController: UITableViewController {
     
     func fill(){
         guard let model = model else {return}
-        
-        dateLabel.text = "\(model.date!)"
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "dd.MM.yyyy"
+        dateLabel.text = "\(dateFormater.string(from: model.date!))"
         gradeLabel.text = "\(model.grade)"
         realValueLabel.text = "\(model.realValue)"
         userValueLabel.text = "\(model.userValue)"

@@ -21,10 +21,11 @@ extension ARViewController{
             
             if object == nil{
                 DispatchQueue.main.async {
-                    
-                    
+                    print("1")
                     let pendulum = PendulumNode(model: self.model!.pendulumModel)
+                    print("2")
                     let object = VirtualObject(withNode: pendulum)
+                    print("3")
                     object.move(to: position, animated: false)
                     object.anchor = self.focusSquare.anchor
                     self.object = object

@@ -22,7 +22,7 @@ class ExamViewController: UITableViewController {
     
     @IBAction func approveTouched(_ sender: UIButton) {
         if isResultOk(result: lengthLabel.text!){
-            model?.pendulumResult.length = Double(lengthLabel.text!) ?? 0
+            model?.pendulumResult.lengthInCm = Int(lengthLabel.text!) ?? 0
             
             if isResultOk(result: timeLabel.text!){
                 model?.pendulumResult.time = Double(timeLabel.text!) ?? 0

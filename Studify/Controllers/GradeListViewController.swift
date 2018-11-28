@@ -35,7 +35,10 @@ class GradeListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let grade = model.grades()[indexPath.row]
-        cell.textLabel?.text = "\(grade.date!)"
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "dd.MM.yyyy"
+        
+        cell.textLabel?.text = "\(dateFormater.string(from:grade.date!))"
         cell.detailTextLabel?.text = "\(grade.grade)"
         return cell
     }
