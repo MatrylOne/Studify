@@ -10,7 +10,6 @@ import UIKit
 
 class LessonDetailViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet weak var runButton: BigCoverButton!
     
     // MARK: - Class properties
     var model:ExperimentModel?

@@ -17,9 +17,8 @@ class GradesModel{
     func grades() -> [Grade]{
         let gradesRequest = NSFetchRequest<Grade>(entityName: "Grade")
         do{
-            if let results = try context.fetch(gradesRequest) as? [Grade]{
-                return results
-            }
+            let results = try context.fetch(gradesRequest)
+            return results
         }catch{
             print(error)
         }

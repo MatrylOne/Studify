@@ -23,7 +23,6 @@
 		AAC196652193618C001E4A70 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAC196642193618C001E4A70 /* tick.mp3 */; };
 		AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC1966721942382001E4A70 /* PendulumNode.swift */; };
 		AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */; };
-		AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */; };
 		AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */; };
 		AACB4D5F21AEA68700DF491D /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D5E21AEA68700DF491D /* DataStorage.swift */; };
 		AACB4D6121AEAF4400DF491D /* GradeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACB4D6021AEAF4400DF491D /* GradeListViewController.swift */; };
@@ -69,7 +68,6 @@
 		AA1CEAF6217F8433002BCAC5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
-		AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewController.swift; sourceTree = "<group>"; };
 		AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewCell.swift; sourceTree = "<group>"; };
 		AA6D54CC2174D47200730309 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			children = (
 				AAD894DC21A855AB00FA1A60 /* ARViewController */,
 				AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */,
-				AA4BFE712170C8FB004FC4BD /* PatternsViewController.swift */,
 				AA6D54CE2174DD0900730309 /* LessonDetailViewController.swift */,
 				AADC83D421959BFC002AE8E6 /* MeasuresViewController.swift */,
 				AA7F6BCC21AC2CD800EFE9CE /* GradeViewController.swift */,
@@ -451,7 +448,6 @@
 				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,
 				AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */,
 				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
-				AAC911EF219453BC007BE3B4 /* PatternsViewController.swift in Sources */,
 				AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */,
 				AACB4D6321AEAF6600DF491D /* GradeDetailViewController.swift in Sources */,
 			);
