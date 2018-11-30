@@ -18,5 +18,10 @@ class Pattern{
         self.descriptors = descriptors
         self.constraints = constraints
     }
-    
+}
+
+extension Pattern:Equatable{
+    public static func == (lhs: Pattern, rhs: Pattern) -> Bool{
+        return lhs.constraints == rhs.constraints && lhs.descriptors == rhs.descriptors && lhs.constraints == rhs.constraints
+    }
 }

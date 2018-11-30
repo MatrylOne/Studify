@@ -23,6 +23,6 @@ class ExperimentModelTests: XCTestCase {
     }
     
     func testLesson(){
-        XCTAssertEqual(lesson.name, model.lesson.name)
+        XCTAssertEqual(model.lesson, lesson)
     }
 }
