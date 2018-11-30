@@ -10,11 +10,13 @@ import UIKit
 import CoreData
 
 class GradeListViewController: UITableViewController {
-    
+    // MARK: - Model
     let model = GradesModel()
     
+    // MARK: - Properties
     var selectedModel = 0
     
+    // Mark: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,7 +25,14 @@ class GradeListViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    
+    @IBAction func clearTouched(_ sender: UIBarButtonItem) {
+        model.removeAll()
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
+    // TODO: Removing grades
     override func numberOfSections(in tableView: UITableView) -> Int {
         return model.lessons.count
     }
@@ -52,6 +61,7 @@ class GradeListViewController: UITableViewController {
         performSegue(withIdentifier: "toGradeDetail", sender: nil)
     }
     
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? GradeDetailViewController{
             controller.model = model.grades()[selectedModel]

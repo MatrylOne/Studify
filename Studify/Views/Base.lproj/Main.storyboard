@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -66,7 +65,13 @@
                             <outlet property="delegate" destination="ZHO-IR-gsm" id="Zkd-JC-q4u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Oceny" id="eqP-Wx-aN3"/>
+                    <navigationItem key="navigationItem" title="Oceny" id="eqP-Wx-aN3">
+                        <barButtonItem key="rightBarButtonItem" title="Wyzeruj" id="Gg3-T3-oMV">
+                            <connections>
+                                <action selector="clearTouched:" destination="ZHO-IR-gsm" id="5kh-T9-6sY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="cNY-2e-TBE" kind="show" identifier="toGradeDetail" id="bcn-aH-H7n"/>
                     </connections>

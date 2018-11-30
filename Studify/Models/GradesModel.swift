@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 class GradesModel{
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var context = {return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext}()
     let lessons = DataStorage.LessonsData.lessons
     
     func grades() -> [Grade]{
@@ -23,5 +23,32 @@ class GradesModel{
             print(error)
         }
         return []
+    }
+    
+    func remove(grade:Grade){
+        context.delete(grade)
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
+    }
+    
+    func removeAll(){
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Grade")
+        let batchRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do{
+            try context.execute(batchRequest)
+        }catch{
+            print(error)
+        }
+    }
+    
+    func save(){
+        do{
+            try context.save()
+        }catch{
+            print(error)
+        }
     }
 }

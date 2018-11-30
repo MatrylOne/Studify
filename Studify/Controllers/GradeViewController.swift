@@ -21,6 +21,7 @@ class GradeViewController: UITableViewController {
     
     // MARK: - Model
     var model:ExperimentModel?
+    let gradesModel = GradesModel()
     
     // MARK: - Methods
     override func viewDidLoad() {
@@ -58,12 +59,8 @@ class GradeViewController: UITableViewController {
                       realValue: model.pendulumModel.lengthInCm,
                       userValue: model.pendulumResult.lengthInCm,
                       date: Date(),
-                      context: model.context)
-            do{
-                try model.context.save()
-            }catch {
-                print(error)
-            }
+                      context: gradesModel.context)
+            gradesModel.save()
         }
     }
 }
