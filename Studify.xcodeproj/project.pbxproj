@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A72189DD01004C3552 /* VirtualObject.swift */; };
+		AA0F03A82189DD01004C3552 /* VirtualObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0F03A72189DD01004C3552 /* VirtualObjectNode.swift */; };
 		AA1CEAF7217F8433002BCAC5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1CEAF6217F8433002BCAC5 /* Utilities.swift */; };
 		AA33C70621B153F00043427E /* PendulumModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA33C70521B153F00043427E /* PendulumModelTests.swift */; };
 		AA33C70A21B161190043427E /* ExperimentModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA33C70921B161190043427E /* ExperimentModelTests.swift */; };
-		AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */; };
+		AA3D7A512189F2BD009DBCCD /* FocusSquareNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D7A502189F2BD009DBCCD /* FocusSquareNode.swift */; };
 		AA4BFE752170CEA7004FC4BD /* LessonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */; };
 		AA6D54D22174E46A00730309 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D12174E46A00730309 /* Lesson.swift */; };
 		AA6D54D421761FE400730309 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D321761FE400730309 /* BlurButton.swift */; };
@@ -58,11 +58,11 @@
 /* Begin PBXFileReference section */
 		AA0F03A02189D503004C3552 /* ARViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		AA0F03A42189D582004C3552 /* ARViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARViewController+Actions.swift"; sourceTree = "<group>"; };
-		AA0F03A72189DD01004C3552 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		AA0F03A72189DD01004C3552 /* VirtualObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectNode.swift; sourceTree = "<group>"; };
 		AA1CEAF6217F8433002BCAC5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		AA33C70521B153F00043427E /* PendulumModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumModelTests.swift; sourceTree = "<group>"; };
 		AA33C70921B161190043427E /* ExperimentModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentModelTests.swift; sourceTree = "<group>"; };
-		AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		AA3D7A502189F2BD009DBCCD /* FocusSquareNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareNode.swift; sourceTree = "<group>"; };
 		AA4BFE6F2170C8B2004FC4BD /* LessonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewController.swift; sourceTree = "<group>"; };
 		AA4BFE742170CEA7004FC4BD /* LessonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewCell.swift; sourceTree = "<group>"; };
 		AA6D54CC2174D47200730309 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		AA0F03A62189DCE9004C3552 /* Virtual Objects */ = {
 			isa = PBXGroup;
 			children = (
-				AA0F03A72189DD01004C3552 /* VirtualObject.swift */,
-				AA3D7A502189F2BD009DBCCD /* FocusSquare.swift */,
+				AA0F03A72189DD01004C3552 /* VirtualObjectNode.swift */,
+				AA3D7A502189F2BD009DBCCD /* FocusSquareNode.swift */,
 				AAC1966721942382001E4A70 /* PendulumNode.swift */,
 			);
 			path = "Virtual Objects";
@@ -375,7 +375,7 @@
 				AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */,
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
 				AA7F6BD621AC4BB500EFE9CE /* ExamViewController.swift in Sources */,
-				AA3D7A512189F2BD009DBCCD /* FocusSquare.swift in Sources */,
+				AA3D7A512189F2BD009DBCCD /* FocusSquareNode.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
 				AACB4D5F21AEA68700DF491D /* DataStorage.swift in Sources */,
 				AACB4D6121AEAF4400DF491D /* GradeListViewController.swift in Sources */,
@@ -395,7 +395,7 @@
 				AACB4D6D21AEC05C00DF491D /* Grade.swift in Sources */,
 				AABAADB121946BC400ADBC3D /* Settings.swift in Sources */,
 				AAD894DD21A855ED00FA1A60 /* ARViewController.swift in Sources */,
-				AA0F03A82189DD01004C3552 /* VirtualObject.swift in Sources */,
+				AA0F03A82189DD01004C3552 /* VirtualObjectNode.swift in Sources */,
 				AAC911EE219453BC007BE3B4 /* LessonsViewController.swift in Sources */,
 				AACB4D6321AEAF6600DF491D /* GradeDetailViewController.swift in Sources */,
 			);

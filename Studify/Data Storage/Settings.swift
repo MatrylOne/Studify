@@ -10,12 +10,12 @@ import Foundation
 import SceneKit
 
 public class Settings{
-    public class FocusSquare{
+    public class FocusSquareSettings{
         static let width:CGFloat = 0.1
         static let height:CGFloat = 0.1
     }
     
-    public class Pendulum{
+    public class PendulumSettings{
         static let minHeight: UInt32 = 15
         static let maxHeight: UInt32 = 120
         
@@ -27,7 +27,7 @@ public class Settings{
         static let frameThickness = CGFloat(0.005)
     }
     
-    public class Physics{
+    public class PhysicsSettings{
         static let gVelocity = 9.8
     }
 }

@@ -28,10 +28,10 @@ class PendulumNode: SCNNode {
     
     public func build(length: CGFloat) -> SCNNode{
         // Properties
-        let ballSize = Settings.Pendulum.ballSize
-        let checkerHeight = Settings.Pendulum.checkerHeight
-        let basePlateHeight = Settings.Pendulum.basePlateHeight
-        let frameThickness = Settings.Pendulum.frameThickness
+        let ballSize = Settings.PendulumSettings.ballSize
+        let checkerHeight = Settings.PendulumSettings.checkerHeight
+        let basePlateHeight = Settings.PendulumSettings.basePlateHeight
+        let frameThickness = Settings.PendulumSettings.frameThickness
         
         let height = length + ballSize + CGFloat(checkerHeight)
         let frameWidth = ballSize * 4
@@ -114,7 +114,7 @@ class PendulumNode: SCNNode {
     }
     
     public func animate(){
-        let angle = Settings.Pendulum.angle
+        let angle = Settings.PendulumSettings.angle
         
         guard let pendulum = childNode(withName: "pendulum", recursively: false),
             let handle = pendulum.childNode(withName: "handle", recursively: false)

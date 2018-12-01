@@ -16,9 +16,9 @@ class ARViewController: UIViewController{
     @IBOutlet weak var returnButton: UIButton!
     
     var screenCenter = CGPoint.zero
-    var object:VirtualObject?
+    var object:VirtualObjectNode?
     
-    let focusSquare = FocusSquare()
+    let focusSquare = FocusSquareNode()
     var model:ExperimentModel?
 
     override func viewWillAppear(_ animated: Bool) {

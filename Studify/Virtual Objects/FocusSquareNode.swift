@@ -9,7 +9,7 @@
 import Foundation
 import ARKit
 
-class FocusSquare: SCNNode{
+class FocusSquareNode: SCNNode{
     
     let handle = SCNNode()
     var anchor: ARAnchor?
@@ -17,7 +17,7 @@ class FocusSquare: SCNNode{
     var isInitiated = false
     
     let plane: SCNNode = {
-        let plane = SCNPlane(width: Settings.FocusSquare.width, height: Settings.FocusSquare.height)
+        let plane = SCNPlane(width: Settings.FocusSquareSettings.width, height: Settings.FocusSquareSettings.height)
         let node = SCNNode(geometry: plane)
         node.opacity = 0
         let material = plane.firstMaterial!

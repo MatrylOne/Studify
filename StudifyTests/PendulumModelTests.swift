@@ -29,7 +29,7 @@ class PendulumModelTests: XCTestCase {
     func testTime(){
         // source https://www.wolframalpha.com/input/?i=T+%3D+2+*+PI+*+sqrt(1.20%2F9.8)
         // l = 120 cm = 1.2 m
-        // g = 9.8 stored at Settings.Physics.gVelocity
+        // g = 9.8 stored at Settings.PhysicsSettings.gVelocity
         // T = 2 * PI * sqrt(l/g)
         let timeFor120cm = 2.199
         XCTAssertEqual(model.time, timeFor120cm, accuracy: 0.001)

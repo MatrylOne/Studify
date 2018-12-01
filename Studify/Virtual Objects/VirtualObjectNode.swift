@@ -10,7 +10,7 @@ import Foundation
 import SceneKit
 import ARKit
 
-class VirtualObject: SCNNode{
+class VirtualObjectNode: SCNNode{
     var node: SCNNode?
     var anchor: ARAnchor?
     private var lastRotation:Float = 0
