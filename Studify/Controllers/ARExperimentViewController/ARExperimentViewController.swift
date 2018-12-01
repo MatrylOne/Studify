@@ -10,7 +10,7 @@ import UIKit
 import ARKit
 import SceneKit
 
-class ARViewController: UIViewController{
+class ARExperimentViewController: UIViewController{
 
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var returnButton: UIButton!
@@ -52,11 +52,11 @@ class ARViewController: UIViewController{
     }
     
     func addGestureToSceneView(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ARViewController.addNode(widhGestureRecognizer:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ARExperimentViewController.addNode(widhGestureRecognizer:)))
         sceneView.addGestureRecognizer(tap)
         tap.numberOfTapsRequired = 1
         
-        let rotate = UIPanGestureRecognizer(target: self, action: #selector(ARViewController.rotateNode(withGestureRecognizer:)))
+        let rotate = UIPanGestureRecognizer(target: self, action: #selector(ARExperimentViewController.rotateNode(withGestureRecognizer:)))
         rotate.minimumNumberOfTouches = 2
         rotate.maximumNumberOfTouches = 3
         
@@ -77,7 +77,7 @@ class ARViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMeasures"{
             guard let navigation = segue.destination as? UINavigationController,
-                let controller = navigation.topViewController as? MeasuresViewController
+                let controller = navigation.topViewController as? ExperimentSummaryViewController
                 else { return }
             controller.model = self.model
         }

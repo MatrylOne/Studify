@@ -13,7 +13,7 @@ class PendulumNode: SCNNode {
     
     let model:PendulumModel
     
-    var lastRotation:Float = 0
+    var currentAngle:Float = 0
     let tickSound = SCNAction.playAudio(SCNAudioSource(fileNamed: "tick.mp3")!, waitForCompletion: false)
     
     init(model:PendulumModel){
@@ -105,12 +105,12 @@ class PendulumNode: SCNNode {
             else { return }
         
         let currentRotation = handle.eulerAngles.z
-        if self.lastRotation > 0 && currentRotation < 0{
+        if self.currentAngle > 0 && currentRotation < 0{
             DispatchQueue.main.async {
                 self.runAction(self.tickSound)
             }
         }
-        self.lastRotation = currentRotation
+        self.currentAngle = currentRotation
     }
     
     public func animate(){

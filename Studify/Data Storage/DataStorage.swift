@@ -10,7 +10,7 @@ import Foundation
 
 class DataStorage{
     public class PatternsData{
-        static let pendulum = Pattern("T = 2 * PI * sqrt(l/g)",
+        static let pendulumPattern = Pattern("T = 2 * PI * sqrt(l/g)",
                                       descriptors: ["T - Okres wahadła",
                                                     "l - Długośc linki wahadła",
                                                     "g - Stałą przyspieszenia grawitacyjnego"],
@@ -24,7 +24,7 @@ class DataStorage{
                                      name: "Ruch harmoniczny",
                                      description: "Lekcja o ruchu harmonicznym",
                                      instruction: "Rusz wahadłem",
-                                     image:"gravity",
-                                     pattern:DataStorage.PatternsData.pendulum)]
+                                     imageName:"gravity",
+                                     pattern:DataStorage.PatternsData.pendulumPattern)]
     }
 }

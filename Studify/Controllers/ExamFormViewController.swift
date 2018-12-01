@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExamViewController: UITableViewController {
+class ExamFormViewController: UITableViewController {
 
     @IBOutlet weak var timeLabel: UITextField!
     @IBOutlet weak var lengthLabel: UITextField!
@@ -43,7 +43,7 @@ class ExamViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller =  segue.destination as? GradeViewController{
+        if let controller =  segue.destination as? ExamGradeViewController{
             controller.model = model
         }else{
             print("zły segue")

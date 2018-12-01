@@ -43,7 +43,7 @@ class LessonsViewController: UICollectionViewController, UICollectionViewDelegat
         
         let lesson = DataStorage.LessonsData.lessons[indexPath.row]
         cell.label.text = lesson.name
-        cell.image.image = UIImage(named: lesson.image)
+        cell.image.image = UIImage(named: lesson.imageName)
         cell.layer.cornerRadius = 10
         
         return cell

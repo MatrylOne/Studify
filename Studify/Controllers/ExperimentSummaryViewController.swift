@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MeasuresViewController: UITableViewController{
+class ExperimentSummaryViewController: UITableViewController{
     var model:ExperimentModel?
     
     let sections = ["Wzór", "Opis", "Dane", "Pomiary", "Uśredniony pomiar"]
@@ -75,7 +75,7 @@ class MeasuresViewController: UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toResults", let controller = segue.destination as? ExamViewController{
+        if segue.identifier == "toResults", let controller = segue.destination as? ExamFormViewController{
             controller.model = self.model
         }
     }

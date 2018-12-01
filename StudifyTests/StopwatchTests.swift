@@ -37,7 +37,7 @@ class StopwatchTests: XCTestCase {
     // MARK: - Helper functions
     func fillWithAverage(time:Int, checks:Int){
         for _ in 0..<checks{
-            stopwatch.check()
+            stopwatch.addTime()
             sleep(UInt32(time))
         }
     }

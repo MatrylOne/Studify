@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradeViewController: UITableViewController {
+class ExamGradeViewController: UITableViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var realTimeLabel: UILabel!

@@ -36,7 +36,7 @@ class Stopwatch{
     }()
     
     // MARK: - Methods
-    func check(){
+    func addTime(){
         checkTimes.append(DispatchTime.now())
     }
 }

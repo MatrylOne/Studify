@@ -14,7 +14,7 @@ struct Lesson{
     let name:String
     let description:String
     let instruction:String
-    let image:String
+    let imageName:String
     let pattern:Pattern
 }
 
@@ -24,7 +24,7 @@ extension Lesson:Equatable{
         let nameEqual = lhs.name == rhs.name
         let descriptiopnEqual = lhs.description == rhs.description
         let instructionEqual = lhs.instruction == rhs.instruction
-        let imageEqual = lhs.image == rhs.image
+        let imageEqual = lhs.imageName == rhs.imageName
         let patternEqual = lhs.pattern == rhs.pattern
         return idEqual && nameEqual && descriptiopnEqual && instructionEqual && imageEqual && patternEqual
     }

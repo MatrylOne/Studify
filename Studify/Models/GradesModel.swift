@@ -14,7 +14,7 @@ class GradesModel{
     var context = {return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext}()
     let lessons = DataStorage.LessonsData.lessons
     
-    func grades() -> [Grade]{
+    func getAllGrades() -> [Grade]{
         let gradesRequest = NSFetchRequest<Grade>(entityName: "Grade")
         do{
             let results = try context.fetch(gradesRequest)

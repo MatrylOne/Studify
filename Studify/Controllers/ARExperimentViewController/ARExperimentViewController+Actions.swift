@@ -9,7 +9,7 @@
 import Foundation
 import ARKit
 
-extension ARViewController{
+extension ARExperimentViewController{
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true)
@@ -52,7 +52,7 @@ extension ARViewController{
     }
     
     @IBAction func timerTouched(_ sender: UIButton) {
-        model!.stopWatch.check()
+        model!.stopWatch.addTime()
     }
     
     func updateFocusSquare(){

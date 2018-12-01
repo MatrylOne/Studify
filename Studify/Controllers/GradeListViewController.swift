@@ -38,12 +38,12 @@ class GradeListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.grades().count
+        return model.getAllGrades().count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let grade = model.grades()[indexPath.row]
+        let grade = model.getAllGrades()[indexPath.row]
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd.MM.yyyy"
         
@@ -64,7 +64,7 @@ class GradeListViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let controller = segue.destination as? GradeDetailViewController{
-            controller.model = model.grades()[selectedModel]
+            controller.model = model.getAllGrades()[selectedModel]
         }
     }
 }

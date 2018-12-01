@@ -21,12 +21,12 @@ class LessonDetailViewController: UIViewController {
         
         if let lessonModel = model?.lesson{
             title = lessonModel.name
-            runButton.setImage(UIImage(named: lessonModel.image), for: .normal)
+            runButton.setImage(UIImage(named: lessonModel.imageName), for: .normal)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let model = model, let controller = segue.destination as? ARViewController{
+        if let model = model, let controller = segue.destination as? ARExperimentViewController{
             controller.model = model
         }
     }

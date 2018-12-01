@@ -9,7 +9,7 @@
 import Foundation
 import ARKit
 
-extension ARViewController: ARSCNViewDelegate, ARSessionDelegate{
+extension ARExperimentViewController: ARSCNViewDelegate, ARSessionDelegate{
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         self.updateFocusSquare()
         
