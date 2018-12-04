@@ -25,7 +25,6 @@ class GradeListViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    
     @IBAction func clearTouched(_ sender: UIBarButtonItem) {
         model.removeAll()
         tableView.reloadData()

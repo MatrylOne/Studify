@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class ExperimentSummaryViewController: UITableViewController{
-    var model:ExperimentModel?
     
+    var model:ExperimentModel?
     let sections = ["Wzór", "Opis", "Dane", "Pomiary", "Uśredniony pomiar"]
     
     override func viewDidLoad() {

@@ -27,7 +27,7 @@ class ARExperimentViewController: UIViewController{
         setupCamera()
         setupAR()
         
-        screenCenter = CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
+        screenCenter = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
         sceneView.scene.rootNode.addChildNode(focusSquare)
     }
     
