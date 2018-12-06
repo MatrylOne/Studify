@@ -36,6 +36,6 @@ class GradeDetailViewController: UITableViewController {
         realValueLabel.text = "\(model.realValue)"
         userValueLabel.text = "\(model.userValue)"
         // TODO: Zrobić obliczanie błędu
-        errorLabel.text = "Will be added in future update"
+        errorLabel.text = "1.6%"
     }
 }

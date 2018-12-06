@@ -8,9 +8,11 @@
 
 import UIKit
 
-class LessonDetailViewController: UIViewController {
+class LessonDetailViewController: UIViewController, UITextViewDelegate {
     // MARK: - IBOutlets
     @IBOutlet weak var runButton: BigCoverButton!
+    
+    @IBOutlet weak var descriptionText: UITextView!
     
     // MARK: - Class properties
     var model:ExperimentModel?
@@ -22,6 +24,9 @@ class LessonDetailViewController: UIViewController {
         if let lessonModel = model?.lesson{
             title = lessonModel.name
             runButton.setImage(UIImage(named: lessonModel.imageName), for: .normal)
+            descriptionText.text = lessonModel.description
+            descriptionText.delegate = self
+            
         }
     }
     
@@ -29,5 +34,9 @@ class LessonDetailViewController: UIViewController {
         if let model = model, let controller = segue.destination as? ARExperimentViewController{
             controller.model = model
         }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        view.layoutIfNeeded()
     }
 }

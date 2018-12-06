@@ -22,7 +22,7 @@ class DataStorage{
     public class LessonsData{
         static let lessons = [Lesson(id: 1,
                                      name: "Ruch harmoniczny",
-                                     description: "Lekcja o ruchu harmonicznym",
+                                     description: "Zeskanuj płaszczyznę i dodaj wirtualne wahadło. Aby dodać wahadło, dotknij ekranu po pojawieniu się kursora. Zbadaj okres wahadła, a następnie użyj danego wzoru do obliczenia jego wysokości. Wahadło można obracać przesuwając dwoma palcami po ekranie. Użyj przycisku timer aby zbierać wiele pomiarów czasowych. Zebrane pomiary posłużą do ustalenia okresu wahadła. Po zebraniu wystarczającej liczby pomiarów dotknij przycisku wyniki. Aby rozpocząć eksperyment dotknij przycisku rozpocznij.",
                                      instruction: "Rusz wahadłem",
                                      imageName:"gravity",
                                      pattern:DataStorage.PatternsData.pendulumPattern)]

@@ -12,14 +12,11 @@ class BlurButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        blur.frame = self.bounds
-        blur.isUserInteractionEnabled = false
-        
-        self.insertSubview(blur, at: 0)
+
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
+        self.backgroundColor = UIColor(white: 1, alpha: 0.4)
+        self.imageView?.bringSubviewToFront(self)
     }
     
 }
