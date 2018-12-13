@@ -37,36 +37,28 @@ class ExamGradeViewController: UITableViewController {
         guard let results = model?.pendulumResult,
             let reality = model?.pendulumModel else { return }
         
-        let roundedTime:Double = round(reality.time * 1000)/1000
+        let roundedTime:Double = Matematical.digits(reality.time, digits: 3)
         let lengthInCm:Int = reality.lengthInCm
         
-        let timeError = 0
-        let lengthError = 0
+        let timeError = gradesModel.calculateError(realValue: reality.time, userValue: results.time)
+        let lengthError = gradesModel.calculateError(realValue: Double(reality.lengthInCm), userValue: Double(results.lengthInCm))
         
-//        realTimeLabel.text = "\(roundedTime)"
-//        calculatedTimeLabel.text = "\(results.time)"
-//        timeErrorLabel.text = "\(timeError)"
-//
-//        realLengthLabel.text = "\(lengthInCm)"
-//        calculatedLengthLabel.text = "\(results.lengthInCm)"
-//        lengthErrorLabel.text = "\(lengthError)"
-//
-//        gradeLabel.text = "Will be added in next update"
-        realTimeLabel.text = "2.199 s"
-        calculatedTimeLabel.text = "2.1 s"
-        timeErrorLabel.text = "4.5%"
+        let grade = gradesModel.calculateGrade(error: lengthError)
         
-        realLengthLabel.text = "120 cm"
-        calculatedLengthLabel.text = "118cm"
-        lengthErrorLabel.text = "1.6%"
-        
-        gradeLabel.text = "4"
-        
+        realTimeLabel.text = "\(roundedTime)"
+        calculatedTimeLabel.text = "\(results.time)"
+        timeErrorLabel.text = "\(Matematical.digits(Double(timeError), digits: 3))%"
+
+        realLengthLabel.text = "\(lengthInCm)"
+        calculatedLengthLabel.text = "\(Matematical.digits(Double(results.lengthInCm), digits: 3))"
+        lengthErrorLabel.text = "\(Matematical.digits(Double(lengthError), digits: 3))%"
+
+        gradeLabel.text = "\(grade)"
         
         if let model = model{
-            _ = Grade(grade: 4,
-                      realValue: 120,//model.pendulumModel.lengthInCm,
-                      userValue: 118,//model.pendulumResult.lengthInCm,
+            _ = Grade(grade: grade,
+                      realValue: model.pendulumModel.lengthInCm,
+                      userValue: model.pendulumResult.lengthInCm,
                       date: Date(),
                       context: gradesModel.context)
             gradesModel.save()

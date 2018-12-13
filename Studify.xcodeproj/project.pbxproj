@@ -17,6 +17,7 @@
 		AA6D54D22174E46A00730309 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D12174E46A00730309 /* Lesson.swift */; };
 		AA6D54D421761FE400730309 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D321761FE400730309 /* BlurButton.swift */; };
 		AA6D54D6217626C700730309 /* BigCoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6D54D5217626C700730309 /* BigCoverButton.swift */; };
+		AA78CB1A21C2D6ED009B189C /* Matematical.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA78CB1921C2D6ED009B189C /* Matematical.swift */; };
 		AA7F6BCD21AC2CD800EFE9CE /* ExamGradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BCC21AC2CD800EFE9CE /* ExamGradeViewController.swift */; };
 		AA7F6BCF21AC3B9700EFE9CE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BCE21AC3B9700EFE9CE /* Stopwatch.swift */; };
 		AA7F6BD121AC3FCB00EFE9CE /* PendulumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7F6BD021AC3FCB00EFE9CE /* PendulumModel.swift */; };
@@ -71,6 +72,7 @@
 		AA6D54D12174E46A00730309 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		AA6D54D321761FE400730309 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
 		AA6D54D5217626C700730309 /* BigCoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCoverButton.swift; sourceTree = "<group>"; };
+		AA78CB1921C2D6ED009B189C /* Matematical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matematical.swift; sourceTree = "<group>"; };
 		AA7F6BCC21AC2CD800EFE9CE /* ExamGradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamGradeViewController.swift; sourceTree = "<group>"; };
 		AA7F6BCE21AC3B9700EFE9CE /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
 		AA7F6BD021AC3FCB00EFE9CE /* PendulumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendulumModel.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				AA1CEAF6217F8433002BCAC5 /* Utilities.swift */,
 				AA7F6BCE21AC3B9700EFE9CE /* Stopwatch.swift */,
+				AA78CB1921C2D6ED009B189C /* Matematical.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				AAC911F0219453BC007BE3B4 /* LessonDetailViewController.swift in Sources */,
 				AAC1966821942382001E4A70 /* PendulumNode.swift in Sources */,
 				AA7F6BD621AC4BB500EFE9CE /* ExamFormViewController.swift in Sources */,
+				AA78CB1A21C2D6ED009B189C /* Matematical.swift in Sources */,
 				AA3D7A512189F2BD009DBCCD /* FocusSquareNode.swift in Sources */,
 				AA6D54D22174E46A00730309 /* Lesson.swift in Sources */,
 				AACB4D5F21AEA68700DF491D /* DataStorage.swift in Sources */,

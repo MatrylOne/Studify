@@ -19,6 +19,7 @@ class GradeDetailViewController: UITableViewController {
     
     // MARK: - Model
     var model:Grade?
+    var gradesModel = GradesModel()
     
     // MARK: - Methods
     override func viewDidLoad() {
@@ -30,12 +31,12 @@ class GradeDetailViewController: UITableViewController {
     func fill(){
         guard let model = model else {return}
         let dateFormater = DateFormatter()
+        let error = gradesModel.calculateError(realValue: Double(model.realValue), userValue: Double(model.userValue))
         dateFormater.dateFormat = "dd.MM.yyyy"
         dateLabel.text = "\(dateFormater.string(from: model.date!))"
         gradeLabel.text = "\(model.grade)"
         realValueLabel.text = "\(model.realValue)"
         userValueLabel.text = "\(model.userValue)"
-        // TODO: Zrobić obliczanie błędu
-        errorLabel.text = "1.6%"
+        errorLabel.text = "\(Matematical.digits(error, digits: 3))%"
     }
 }

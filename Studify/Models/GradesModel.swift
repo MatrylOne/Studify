@@ -51,4 +51,30 @@ class GradesModel{
             print(error)
         }
     }
+    
+    func calculateError(realValue:Double, userValue:Double) -> Double{
+        return 100 * abs(realValue - userValue)/realValue
+    }
+    
+    func calculateGrade(error:Double) -> Int{
+        if error < 2{
+            return 5
+        } else if error < 4{
+            return 5
+        } else if error < 6{
+            return 4
+        } else if error < 8{
+            return 4
+        } else if error < 10{
+            return 3
+        } else if error < 12{
+            return 3
+        } else if error < 14{
+            return 2
+        } else if error < 16 {
+            return 2
+        } else {
+            return 1
+        }
+    }
 }
