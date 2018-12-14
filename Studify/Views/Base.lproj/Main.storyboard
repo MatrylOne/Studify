@@ -436,6 +436,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="bellTouched:" destination="ctP-92-R61" eventType="touchUpInside" id="vPG-Rp-yOO"/>
                                     <action selector="timerTouched:" destination="ctP-92-R61" eventType="touchDown" id="JOI-sf-qB9"/>
                                 </connections>
                             </button>

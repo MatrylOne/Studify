@@ -11,7 +11,6 @@ import UIKit
 class LessonDetailViewController: UIViewController, UITextViewDelegate {
     // MARK: - IBOutlets
     @IBOutlet weak var runButton: BigCoverButton!
-    
     @IBOutlet weak var descriptionText: UITextView!
     
     // MARK: - Class properties

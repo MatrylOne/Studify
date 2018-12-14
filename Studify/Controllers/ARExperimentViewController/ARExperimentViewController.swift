@@ -20,6 +20,7 @@ class ARExperimentViewController: UIViewController{
     
     let focusSquare = FocusSquareNode()
     var model:ExperimentModel?
+    var soundEnabled = true
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

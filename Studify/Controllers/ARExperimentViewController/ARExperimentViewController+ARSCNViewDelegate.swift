@@ -14,7 +14,9 @@ extension ARExperimentViewController: ARSCNViewDelegate, ARSessionDelegate{
         self.updateFocusSquare()
         
         if let object = self.object, let pendulum = object.node as? PendulumNode{
-            pendulum.tickOnZero()
+            if soundEnabled{
+                pendulum.tickOnZero()
+            }
             
             guard let frame = sceneView.session.currentFrame else { return }
             let camera = frame.camera

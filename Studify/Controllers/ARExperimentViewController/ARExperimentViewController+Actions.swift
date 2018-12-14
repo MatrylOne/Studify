@@ -52,6 +52,10 @@ extension ARExperimentViewController{
         model!.stopWatch.addTime()
     }
     
+    @IBAction func bellTouched(_ sender: UIButton) {
+        soundEnabled = !soundEnabled
+    }
+    
     func updateFocusSquare(){
         let hitTests = sceneView.hitTest(screenCenter, types: .existingPlaneUsingExtent)
         guard let result = hitTests.first,
