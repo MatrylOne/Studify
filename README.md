@@ -16,13 +16,13 @@ install Xcode 10
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To install app on your iOS device you have to open project in Xcode and connect iOS Device to mac.
 
 ```
 Clone this repository
 Change development team
+Connect device
+Run
 ```
 
 ## Deployment
@@ -32,11 +32,3 @@ You will need iOS 12 device, and iPhone that supports AR
 ## Authors
 
 * **Jakub Nadolny** - *Developer* - [MatrylOne](https://github.com/MatrylOne)
-
-## License
-
-*Todo
-
-## Acknowledgments
-
-* Todo
